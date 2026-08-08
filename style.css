@@ -12,6 +12,7 @@ body {
 	/*flex-direction: column;*/
 	border: 4px outset rgb(150,150,150);
 	width: 70%;
+	height: 100vh;
 	margin: 0 auto;
 }
 
@@ -23,64 +24,91 @@ body {
 
 .header-container {
 	display: flex;
+	height: 100px;
+	justify-content: flex-end;
 	padding: 10px;
 	box-sizing: border-box;
 	flex-direction: inline;
 	background-image: linear-gradient(to right, blue, dodgerblue, dodgerblue, skyblue);
 }
-
 .header-container .name {
-	flex-grow: 10;
+	flex-grow:1;
+	overflow:hidden;
+	text-align: left;
+	font-family: 'Times New Roman';
+}
+.header-container .icon {
+	position: relative;
+	overflow: hidden;
+	aspect-ratio:1/1;
+	height:100%;
+	width:auto;
+	box-sizing: border-box;
+}
+.header-container .icon img {
+
+	image-rendering: pixelated;
+	width:100%;
+	height: auto;
+	position:absolute;
+
 }
 
 .main-container .title{
 	box-shadow: inset 0 0 0 4px white;
-	text-align: center;
 	color: white;
 	font-family: Verdana;
-	width: 100%;
-	height: auto;
-	min-height: 100px;
 	margin: 0 auto;
 }
 
 .main-container .body{
 	flex-direction: inline;
+	height: 100%;
 }
 .main-container .body .content{
-	background-color: white;
+	background-color: black;
 	padding: 10px;
 	border: 4px solid white;
 	border-top: none;
 	box-shadow: 
 	inset 2px 2px 0 2px darkgray,
-	inset 0 0 0 4px gainsboro
-
-	;
-	text-align:center;
+	inset 0 0 0 4px gainsboro;
 	height: 100%;
+	color: white;
 }
 
 .button-container {
-	position: relative;
+	position:relative;
+	text-align: center;
+	aspect-ratio:0.8/1;
+	height:100%;
+	width:auto;
+	background-color: rgb(240,240,240);
+	border: 4px outset white;
+	box-sizing: border-box;
 
+	/*box-shadow: 
+	inset 2px 2px 0 2px darkgray,
+	inset 0 0 0 4px gainsboro;*/
+}
+.button-container a {
+	position:relative;
+	display: block;
+	width:100%;
+	height:100%;
+	z-index: 100;
+}
+.button-container img {
+	image-rendering: pixelated;
+	width:90%;
+	height: auto;
+	position:absolute;
+	top:50%;
+	left:50;
+	transform: translate(-50%,-50%);
 }
 
-.button-container img {
-	box-sizing: border-box;
-	padding: 16px 8px 16px 8px;
-	min-height:100%;
-	width:auto;
-	background-color: white;
-	border: 2px outset rgb(150,150,150);
-	box-shadow: 
-	inset 2px 2px 0 2px darkgray,
-	inset 0 0 0 4px gainsboro;
-	width: auto;
-	height: 80%;
-	image-rendering: pixelated;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-100%, -50%);
+.button-container:hover {
+	background-color: rgb(220,220,220);
+	cursor: pointer;
 }
