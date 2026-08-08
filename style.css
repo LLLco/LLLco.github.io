@@ -1,0 +1,52 @@
+body {
+  background-color: white;
+  background-image: url("images/style/ocean.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  color: black;
+  font-family: Verdana;
+}
+
+.main-container {
+	position:relative;
+	flex-direction: column;
+	border: 4px outset rgb(150,150,150);
+	width: 70%;
+	margin: 0 auto;
+}
+
+.box {
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  border: none;
+  /*box-shadow:
+    0 0 0 1.5px rgb(124, 255, 168),
+    0 0 0 3px rgb(53, 73, 255);*/
+  border-radius: 1px;
+}
+
+.header {
+	background-image: linear-gradient(to right, blue, dodgerblue, dodgerblue, skyblue);
+	background-size: cover;
+	z-index: 1;*/
+}
+
+.main-container .title{
+	box-shadow: inset 0 0 0 4px #FFFFFF;
+	text-align: center;
+	color: black;
+	font-family: Verdana;
+	width: 100%;
+	height: auto;
+	min-height: 100px;
+	margin: 0 auto;
+}
+
+.main-container .body{
+	flex-direction: inline;
+}
+.main-container .body .content{
+	background-color: white;
+	text-align:center;
+	height: 100%;
+}
