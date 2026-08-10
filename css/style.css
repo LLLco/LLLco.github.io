@@ -5,21 +5,21 @@ body {
   background-repeat: repeat;
   color: black;
   font-family: Verdana;
+  display: flex;
+  flex-direction: column;
 }
-
 .main-container {
 	position:relative;
-	/*flex-direction: column;*/
-	border: 4px outset rgb(150,150,150);
-	width: 60%;
-	height: fit-content;
+	width: 90vw;
 	margin: 0 auto;
 }
 .main-container .title{
-	box-shadow: inset 0 0 0 4px white;
-	color: white;
 	font-family: Verdana;
+	height: 12vh;
 	margin: 0 auto;
+}
+.main-container .title .name{
+	font-size:6cqh;
 }
 .main-container .body{
 	flex-direction: inline;
@@ -28,26 +28,41 @@ body {
 	height: 100%;
 }
 
-.box {
-  border-width: var(--border-width);
-  border-style: var(--border-style);
-  border: none;
+.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 3vw;
+}
+
+.window {
+	border: 0.3vw outset rgb(150,150,150);
+	height: fit-content;
+	max-width: 95vw;
+
 }
 
 .header-container {
 	display: flex;
-	height: 100px;
 	justify-content: flex-end;
-	padding: 10px;
+	padding: 0.5vw;
 	box-sizing: border-box;
 	flex-direction: inline;
 	background-image: linear-gradient(to right, blue, dodgerblue, dodgerblue, skyblue);
+	box-shadow: inset 0 0 0 0.3vw white;
+	color: white;
+	height: 8vh;
 }
 .header-container .name {
 	flex-grow:1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	overflow:hidden;
 	text-align: left;
+	padding-left:1vw;
 	font-family: 'Times New Roman';
+	font-size: 4cqh;
 }
 .header-container .icon {
 	position: relative;
@@ -67,30 +82,32 @@ body {
 
 .content-container{
 	position:relative;
-	z-index: 2;
 	display: flex;
 	flex-direction: row;
-	background-color: black;
 	box-sizing: border-box;
-	border: 4px solid white;
+	border: 0.3vw solid white;
 	border-top: none;
 	box-shadow: 
-		inset 2px 2px 0 2px darkgray,
-		inset 0 0 0 4px gainsboro;
+		inset 0.15vw 0.15vw 0 0.15vw darkgray,
+		inset 0 0 0 0.3vw gainsboro;
 	height: 100%;
 	width: 100%;
 	color: white;
 }
+
 .content-container .content{
-	padding: 10px;
+	padding: 0.5vw;
+	min-height: 10vh;
 	flex-grow: 1;
 	order: 1;
+	z-index: -100000;
+	/*font-size:1vw;*/
 }
 .content-container .scrollbar {
 	image-rendering: pixelated;
 	position:relative;
 	order: 2;
-	width:128px;
+	width:3vw;
 	top: 4px; left:0px;
 	padding-bottom: 40px;
 	background-image: url("../images/misc/scrollbar_background.png");
@@ -132,6 +149,31 @@ body {
 .button-container:hover {
 	/*background-color: rgb(220,220,220);*/
 	cursor: pointer;
-	transform: translate(0px,-2px);
-	box-shadow:  0 4px 0 0 black;
+	transform: translate(0px,-0.3vw);
+	box-shadow:  0 0.3vw 0 0 black;
+}
+
+.project {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-position: center;
+	background-size: cover;
+	background-blend-mode: multiply;
+}
+.project .icon {
+	height:400px;
+	order: 0;
+}
+.project .textbox {
+	order: 1;
+	display:flex; 
+	flex-direction: column; 
+	flex-basis: 20%;
+	flex-grow:1;
+	padding: 0 1vw 1vw 1vw;
+	font-size:large
+}
+.project .textbox h2{
+	text-align: center;
 }
