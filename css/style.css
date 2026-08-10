@@ -22,7 +22,7 @@ body {
 	font-size:6cqh;
 }
 .main-container .body{
-	flex-direction: inline;
+	flex-direction: row;
 	box-sizing: border-box;
 	overflow: hidden;
 	height: 100%;
@@ -47,7 +47,7 @@ body {
 	justify-content: flex-end;
 	padding: 0.5vw;
 	box-sizing: border-box;
-	flex-direction: inline;
+	flex-direction: row;
 	background-image: linear-gradient(to right, blue, dodgerblue, dodgerblue, skyblue);
 	box-shadow: inset 0 0 0 0.3vw white;
 	color: white;
