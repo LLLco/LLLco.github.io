@@ -16,7 +16,26 @@
 				<img src="./images/style/logo.png">
 			</div>
 			<div class= "name">
-				bjorlidev.com | GAME DEVELOPER
+				bjorlidev.com
+			</div>
+			<!-- 
+			<div class="button-container">
+				<img src="./images/buttons/closebutton.png">
+				<a href="https://google.com"></a>
+			</div>
+		-->
+		</div>
+	</div>
+	<p></p>
+	<div class="window">
+		<div class="header-container" style="height:3vw;">
+			<!--
+			<div class= "icon">
+				<img src="./images/style/logo.png">
+			</div>
+			-->
+			<div class= "name">
+				./introduction
 			</div>
 			<div class="button-container">
 				<img src="./images/buttons/closebutton.png">
@@ -24,23 +43,46 @@
 			</div>
 		</div>
 		<div class="body content-container">
-			<div class="content" style="background-color: black;">
-				<h1>I'm Liam Burley, a Level Designer and Game Developer from California !!  </h1>
-				Hello, welcome to my awesome and cool work in progress portfolio site!
-				<br>
-				I got tired of how awful google sites is, so I'm here now.
-				<br>
-				I do have a custom domain, but until this site is ready, I won't be using it.
-				<br><br><br>
+			<div class="row content" style="background-color: black; flex-shrink: 1;">
+				<div>
+					<h1>I'm Liam Burley, a Level Designer and Game Developer from California !!  </h1>
+					Hello, welcome to my awesome and cool work in progress portfolio site!
+					<br>
+					I got tired of how awful google sites is, so I'm here now.
+					<br>
+					I do have a custom domain, but until this site is ready, I won't be using it.
+					<br><br><br>
 
-				You can see my current live site at <a href="http://www.bjorlidev.com">http://www.bjorlidev.com</a> !!
-				<br><br><br><br><br><br><br><br><br><br><br>
+					You can see my current live site at <a href="http://www.bjorlidev.com">http://www.bjorlidev.com</a> !!
+					<br><br><br><br><br><br><br><br><br><br><br>
+				</div>
+				<div class="window" style="position: absolute; z-index: 1;">
+					<div class="header-container" style="height:3vw;">
+						<!--
+						<div class= "icon">
+							<img src="./images/style/logo.png">
+						</div>
+						-->
+						<div class= "name">
+							./me.png
+						</div>
+						<div class="button-container">
+							<img src="./images/buttons/closebutton.png">
+							<a href="https://google.com"></a>
+						</div>
+					</div>
+					<div class="body content-container">
+						<div class="content" style="position:relative;background-image: url(./images/about/me.jpg); background-size: cover; height:15vw; aspect-ratio: 1/1;">
+							
+						</div>
+					</div>
+				</div>
 			</div>
-
 		</div>
 	</div>
+
 	
-	<div style="position:relative; left:35vw; width:20vw; top:-3vh; z-index: 100;">
+	<div style="position:relative; margin: 0 auto; width:400px; top:-4vh; z-index: 100;">
 		<div class="window">
 			<div class="header-container">
 				<div class= "icon">
@@ -57,8 +99,8 @@
 		</div>
   	</div>
 
-	<div style="position:relative; left:13vw; width:60vw; top:-6vh; z-index: 99;">
-		<div class="window">
+	<div>
+		<div class="window project-window" style="position:relative; top:-6vh; z-index: 99;">
 			<div class="header-container">
 				<div class= "icon">
 					<img src="./images/projects/skywind/logo.png">
@@ -89,55 +131,52 @@
 		</div>
   	</div>
 
-	<div class="row">
-		<div class="window" style="position:relative; left:7vw; width:70vw; top:0vh; z-index: 100;">
-			<div class="header-container">
-				<div class= "icon">
-					<img src="./images/projects/tog/logo.png">
-				</div>
-				<div class= "name">
-					TOWER OF GENN
-				</div>
-				<div class="button-container">
-					<img src="./images/buttons/closebutton.png">
-					<a href="https://google.com"></a>
+	<div class="window project-window" style="position:relative; top:0vh; z-index: 100;">
+		<div class="header-container">
+			<div class= "icon">
+				<img src="./images/projects/tog/logo.png">
+			</div>
+			<div class= "name">
+				TOWER OF GENN
+			</div>
+			<div class="button-container">
+				<img src="./images/buttons/closebutton.png">
+				<a href="https://google.com"></a>
+			</div>
+		</div>
+		<div class="content-container">
+			<div class="content project" style="background-image: url('./images/projects/tog/background.png'); background-color: rgba(53, 76, 95, 0.774);">
+				<img src="./images/projects/tog/logo.png" class="icon">
+				<div class="textbox" style="padding-right:10vw;">
+					<h2>GAME DIRECTOR</h2>
+					Tower of Genn is my first large scale and currently primary project directed by me with a dynamic team of 25+ people.
+					</p>
+					As the primary designer, I designed the rules, interactions, and content that create the identity of this puzzle-strategy building game, 
+					focusing on long term strategy in a calm and encouraging environment.
+					</p>
+					The game has been in development for nearly a year, outside of full-time university course-work, with a team of all students. 
+					Being the director of such a spirited team has been one of my favorite experiences too date!
 				</div>
 			</div>
-			<div class="content-container">
-				<div class="content project" style="background-image: url('./images/projects/tog/background.png'); background-color: rgba(53, 76, 95, 0.774);">
-					<img src="./images/projects/tog/logo.png" class="icon">
-					<div class="textbox" style="padding-right:10vw;">
-						<h2>GAME DIRECTOR</h2>
-						Tower of Genn is my first large scale and currently primary project directed by me with a dynamic team of 25+ people.
-						</p>
-						As the primary designer, I designed the rules, interactions, and content that create the identity of this puzzle-strategy building game, 
-						focusing on long term strategy in a calm and encouraging environment.
-						</p>
-						The game has been in development for nearly a year, outside of full-time university course-work, with a team of all students. 
-						Being the director of such a spirited team has been one of my favorite experiences too date!
+			<div class="window desktop-window" style="position:absolute; right:-14vw; top:5vh; z-index: 100;">
+				<div class="header-container" style="position:relative; width:23vw;">
+					<div class= "icon">
+						<img src="./images/projects/tog/logo.png">
+					</div>
+					<div class= "name">
+						./tog.gif
+					</div>
+					<div class="button-container">
+						<img src="./images/buttons/closebutton.png">
+						<a href="https://google.com"></a>
+					</div>
+				</div>
+				<div class="content-container">
+					<div class="content project" style="background-image: url(./images/projects/tog/gameplay.gif)">
+						<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<div class="window" style="position:relative; left:-5vw; top:10vh; z-index: 100;">
-			<div class="header-container" style="position:relative; width:23vw;">
-				<div class= "icon">
-					<img src="./images/projects/tog/logo.png">
-				</div>
-				<div class= "name">
-					./tog.gif
-				</div>
-				<div class="button-container">
-					<img src="./images/buttons/closebutton.png">
-					<a href="https://google.com"></a>
-				</div>
-			</div>
-			<div class="content-container">
-				<div class="content project" style="background-image: url(./images/projects/tog/gameplay.gif)">
-					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-				</div>
-			</div>
-		</div>
-  	</div>
+	</div>
   </body>

@@ -1,12 +1,13 @@
 body {
-  background-color: white;
-  background-image: url("../images/style/ocean.jpg");
-  background-size: cover;
-  background-repeat: repeat;
-  color: black;
-  font-family: Verdana;
-  display: flex;
-  flex-direction: column;
+	background-color: white;
+	background-image: url("../images/style/ocean.jpg");
+	background-size: cover;
+	background-repeat: repeat;
+	color: black;
+	font-family: Verdana;
+	display: flex;
+	flex-direction: column;
+	--mobile-mode: if(media(width<900px): true; else: false);
 }
 .main-container {
 	position:relative;
@@ -15,11 +16,11 @@ body {
 }
 .main-container .title{
 	font-family: Verdana;
-	height: 12vh;
+	height: 10vw;
 	margin: 0 auto;
 }
 .main-container .title .name{
-	font-size:6cqh;
+	font-size:8vw;
 }
 .main-container .body{
 	flex-direction: row;
@@ -39,7 +40,13 @@ body {
 	border: 0.3vw outset rgb(150,150,150);
 	height: fit-content;
 	max-width: 95vw;
-
+}
+.project-window {
+	margin: 0 auto;
+	width: if(style(--mobile-mode: true):90%; else:70vw);
+}
+.desktop-window {
+	visibility: if(style(--mobile-mode: true):hidden; else:visible);
 }
 
 .header-container {
@@ -100,7 +107,7 @@ body {
 	min-height: 10vh;
 	flex-grow: 1;
 	order: 1;
-	z-index: -100000;
+	z-index: -1;
 	/*font-size:1vw;*/
 }
 .content-container .scrollbar {
@@ -155,22 +162,24 @@ body {
 
 .project {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-direction: if(style(--mobile-mode: true):column; else:row;);
+
 	background-position: center;
 	background-size: cover;
 	background-blend-mode: multiply;
 }
 .project .icon {
-	height:400px;
+	margin: 0 auto;
+	max-height:400px;
+	max-width: min(100%, 400px);
 	order: 0;
 }
 .project .textbox {
 	order: 1;
 	display:flex; 
 	flex-direction: column; 
-	flex-basis: 20%;
-	flex-grow:1;
+	flex-basis: 0%;
+	flex-grow:2;
 	padding: 0 1vw 1vw 1vw;
 	font-size:large
 }
