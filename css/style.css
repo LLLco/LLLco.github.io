@@ -51,8 +51,6 @@ body {
 .row {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
-	gap: 3vw;
 }
 .column-gap {
 	height:3vh;
@@ -217,6 +215,7 @@ body {
 }
 
 .content-container{
+	pointer-events: none;
 	position:relative;
 	display: flex;
 	flex-direction: row;
@@ -308,10 +307,6 @@ body {
 	border: 0.3vw outset white;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
-.project .textbox h2{
-	text-align: center;
-	font-family: 'Times New Roman', Times, serif;
-}
 
 #gif{
 	position:absolute; 
@@ -332,6 +327,10 @@ body {
 	border: 0.3vw outset white;
 	border-radius: 20px;
 	padding: 1%;
+	font-family: 'Times New Roman', Times, serif;
+	font-weight: bold;
+	text-align: center;
+	font-size: 150%;
 }
 #text-bubble-body {
 	background-color: rgba(240, 240, 240, 0.8);
@@ -366,4 +365,99 @@ body {
   mask-composite: exclude;
 
   animation: headerAnimation var(--header-anim-time) linear infinite;
+}
+
+
+
+
+
+#level-tag,
+#systems-tag,
+#quests-tag,
+#combat-tag,
+#multiplayer-tag {
+	color: black;
+	border-radius: 20px;
+	padding: 1%;
+	height: 0.5vw;
+	font-size: 75%;
+	display: flex;
+	align-items: center; 
+	justify-content: center; 
+	margin-bottom: 0.5vw;
+	pointer-events: auto;
+
+	--border-size: 0.3vw;
+	--color: white;
+	--ocolor: white;
+}
+#level-tag:hover,
+#systems-tag:hover,
+#quests-tag:hover,
+#combat-tag:hover,
+#multiplayer-tag:hover {
+	/* cursor: pointer; */
+	transform: translate(0px,calc(var(--border-width) * 2));
+	box-shadow:  0 calc(var(--border-width)*-2) 0 0 var(--ocolor);
+}
+
+#level-tag{
+	order: 0;
+	--color: rgba(148, 255, 76, 0.9);
+	background-color: var(--color);
+	--ocolor: rgba(157, 241, 101, 0.9);
+	border: var(--border-size) outset var(--ocolor);
+}
+#level-tag::after{
+	content: "LEVELS";
+	font-weight: bold;
+	width: fit-content;
+}
+#systems-tag{
+	order: 1;
+	--color: rgba(241, 92, 5, 0.9);
+	background-color: var(--color);
+	--ocolor: rgba(228, 122, 60, 0.9);
+	border: var(--border-size) outset var(--ocolor);
+}
+#systems-tag::after{
+	content: "SYSTEMS";
+	font-weight: bold;
+	width: fit-content;
+}
+#combat-tag{
+	order: 2;
+	--color: rgba(24, 65, 245, 0.9);
+	background-color: var(--color);
+	--ocolor: rgba(71, 104, 255, 0.9);
+	border: var(--border-size) outset var(--ocolor);
+}
+#combat-tag::after{
+	content: "COMBAT";
+	font-weight: bold;
+	width: fit-content;
+}
+#quests-tag{
+	order: 3;
+	--color: rgba(248, 52, 215, 0.9);
+	background-color: var(--color);
+	--ocolor: rgba(250, 156, 226, 0.9);
+	border: var(--border-size) outset var(--ocolor);
+}
+#quests-tag::after{
+	content: "QUESTS";
+	font-weight: bold;
+	width: fit-content;
+}
+#multiplayer-tag{
+	order: 4;
+	--color: rgba(56, 209, 255, 0.9);
+	background-color: var(--color);
+	--ocolor: rgba(166, 234, 255, 0.9);
+	border: var(--border-size) outset var(--ocolor);
+}
+#multiplayer-tag::after{
+	content: "MULTIPLAYER";
+	font-weight: bold;
+	width: fit-content;
 }
