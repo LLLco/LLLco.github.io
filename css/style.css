@@ -15,7 +15,7 @@ body {
 	margin: 0 auto;
 	width:100%;
 	
-	--mobile-mode: if(media(width<1100px): true; else: false);
+	--mobile-mode: if(media(width<1600px): true; else: false);
 	--border-width: 0.1vw;
 	--header-anim-time: 10s;
 	
@@ -289,6 +289,7 @@ body {
 	background-position: center;
 	background-size: cover;
 	background-blend-mode: multiply;
+	gap: 1vw;
 }
 .project .icon {
 	margin: 0 auto;
@@ -306,6 +307,7 @@ body {
 	padding: 0 1vw 1vw 1vw;
 	font-size: 100%;
 	border: 0.3vw outset white;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 .project .textbox h2{
 	text-align: center;
