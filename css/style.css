@@ -52,13 +52,12 @@ body {
 	display: flex;
 	flex-direction: row;
 }
-.column-gap {
-	height:3vh;
-}
+
 
 .website-header {
 	height: 10vw;
 	font-size:400%;
+	margin-bottom: 1vh;
 }
 
 
@@ -107,9 +106,12 @@ body {
 	border: var(--border-width) outset rgb(150,150,150);
 	/* height: fit-content; */
 	max-width: 100%;
+	overflow: hidden;
+	
 }
 .project-window {
 	margin: 0 auto;
+	margin-bottom: 2vh;
 	width: if(style(--mobile-mode: true):90%; else:70vw);
 }
 .desktop-window {
