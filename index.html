@@ -9,6 +9,9 @@
   </head>
   
   <body>
+
+  <div class="absolute-container">
+
 	<!--PHOTO OF ME-->
 	<div class="window desktop-window" style="position:absolute; right:12vw; top:30vh; width:23vw; z-index: 100;">
 		<div class="header-container" style="height:3vw;">
@@ -44,10 +47,11 @@
 		-->
 		</div>
 	</div>
-	<p></p>
 
+	<div class="column-gap"></div>
 	<!--INTRODUCTION-->
-	<div class="window intoduction-window" style="position:relative; width: 60vw; left: 10vw;">
+
+	<div class="window intoduction-window" style="position:relative;">
 		<div class="header-container" style="height:3vw;">
 			<!--
 			<div class= "icon">
@@ -73,8 +77,13 @@
 					I do have a custom domain, but until this site is ready, I won't be using it.
 					<br><br><br>
 
-					You can see my current live site at <a href="http://www.bjorlidev.com">http://www.bjorlidev.com</a>
-					<br><br><br><br><br><br><br><br><br><br><br>
+					You can see my current live site at <a href="http://www.bjorlidev.com" style="z-index: 1000000000000000;">http://www.bjorlidev.com</a>
+					<br><br>
+					
+					I run TRIPLEDDRUGGCO, a loose game development conglomerate,
+					<br>
+					 currently focusing on releasing Tower of Genn. Wishlist on Steam!
+					<br><br><br><br><br><br>
 					
 				</div>
 			</div>
@@ -82,7 +91,7 @@
 	</div>
 
 	<!--PROJECT HEADER-->
-	<div style="position:relative; margin: 0 auto; width:400px; top:-4vh; z-index: 100;">
+	<!-- <div style="position:relative; margin: 0 auto; width:400px; top:-4vh; z-index: 100;">
 		<div class="window">
 			<div class="header-container">
 				<div class= "icon">
@@ -97,49 +106,17 @@
 				</div>
 			</div>
 		</div>
-  	</div>
+  	</div> -->
 
-	<!--SKYWIND-->
-	<div>
-		<div class="window project-window" style="position:relative; top:-6vh; z-index: 99;">
-			<div class="header-container">
-				<div class= "icon">
-					<img src="./images/projects/skywind/logo.png">
-				</div>
-				<div class= "name">
-					SKYWIND
-				</div>
-				<div class="button-container">
-					<img src="./images/buttons/closebutton.png">
-					<a href="https://google.com"></a>
-				</div>
-			</div>
-			<div class="content-container">
-				<div class="content project" style="background-image: url('./images/projects/skywind/background.jpg');">
-					<img src="./images/projects/skywind/logo.png" class="icon">
-					<div class="textbox">
-					<h2>INTERIOR LEVEL DESIGNER</h2>
-					TESR: Skywind is a full remaster of one of my favorite games ever made, The Elder Scrolls III: Morrowind. 
-					It has been an absolute pleasure to work on!
-					</p>
-					As a level designer, I am responsible for reimagining dungeons and interiors from the original game to be engaging, memorable, rewarding, and 
-					downright epic.
-					</p>
-					You can currently find me bringing life to Daedric ruins and citizens' huts across Vvardenfell!
-					</div>
-				</div>
-			</div>
-		</div>
-  	</div>
+	<div class="column-gap"></div>
 
-	<!--TOWER OF GENN-->
-	<div class="window project-window" style="position:relative; top:0vh; z-index: 100;">
-		<div class="header-container">
+	<div class="window container-container">
+		<div class="header-container" style="height:5vw;">
 			<div class= "icon">
-				<img src="./images/projects/tog/logo.png">
+				<img src="./images/style/logo.png">
 			</div>
 			<div class= "name">
-				TOWER OF GENN
+				PROJECTS
 			</div>
 			<div class="button-container">
 				<img src="./images/buttons/closebutton.png">
@@ -147,38 +124,94 @@
 			</div>
 		</div>
 		<div class="content-container">
-			<div class="content project" style="background-image: url('./images/projects/tog/background.png'); background-color: rgba(53, 76, 95, 0.774);">
-				<img src="./images/projects/tog/logo.png" class="icon">
-				<div class="textbox" style="padding-right:10vw;">
-					<h2>GAME DIRECTOR</h2>
-					Tower of Genn is my first large scale and currently primary project directed by me with a dynamic team of 25+ people.
-					</p>
-					As the primary designer, I designed the rules, interactions, and content that create the identity of this puzzle-strategy building game, 
-					focusing on long term strategy in a calm and encouraging environment.
-					</p>
-					The game has been in development for nearly a year, outside of full-time university course-work, with a team of all students. 
-					Being the director of such a spirited team has been one of my favorite experiences too date!
+			<div class="content contained" style="z-index: 100;">
+
+				<!--SKYWIND-->
+				<div>
+					<div class="window project-window">
+						<div class="header-container">
+							<div class= "icon">
+								<img src="./images/projects/skywind/logo.png">
+							</div>
+							<div class= "name">
+								SKYWIND
+							</div>
+							<div class="button-container">
+								<img src="./images/buttons/closebutton.png">
+								<a href="https://google.com"></a>
+							</div>
+						</div>
+						<div class="content-container">
+							<div class="content project" style="background-image: url('./images/projects/skywind/background.jpg');">
+								<img src="./images/projects/skywind/logo.png" class="icon">
+								<div class="textbox">
+								<h2>INTERIOR LEVEL DESIGNER</h2>
+								TESR: Skywind is a full remaster of one of my favorite games ever made, The Elder Scrolls III: Morrowind. 
+								It has been an absolute pleasure to work on!
+								</p>
+								As a level designer, I am responsible for reimagining dungeons and interiors from the original game to be engaging, memorable, rewarding, and 
+								downright epic.
+								</p>
+								You can currently find me bringing life to Daedric ruins and citizens' huts across Vvardenfell!
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="window desktop-window" style="position:absolute; right:-14vw; top:5vh; z-index: 100;">
-				<div class="header-container" style="position:relative; width:23vw;">
-					<div class= "icon">
-						<img src="./images/projects/tog/logo.png">
+
+				<div class="column-gap"></div>
+
+				<!--TOWER OF GENN-->
+				<div class="window project-window" style="position:relative; top:0vh; z-index: 100;">
+					<div class="header-container">
+						<div class= "icon">
+							<img src="./images/projects/tog/logo_alt_2.png">
+						</div>
+						<div class= "name">
+							TOWER OF GENN
+						</div>
+						<div class="button-container">
+							<img src="./images/buttons/closebutton.png">
+							<a href="https://google.com"></a>
+						</div>
 					</div>
-					<div class= "name">
-						./tog.gif
-					</div>
-					<div class="button-container">
-						<img src="./images/buttons/closebutton.png">
-						<a href="https://google.com"></a>
+					<div class="content-container">
+						<div class="content project" style="background-image: url('./images/projects/tog/background.png'); background-color: rgba(53, 76, 95, 0.774);">
+							<img src="./images/projects/tog/logo_alt_2.png" class="icon">
+							<div class="textbox">
+								<h2>GAME DIRECTOR</h2>
+								Tower of Genn is my first large scale and currently primary project directed by me with a dynamic team of 25+ people.
+								</p>
+								As the primary designer, I designed the rules, interactions, and content that create the identity of this puzzle-strategy building game, 
+								focusing on long term strategy in a calm and encouraging environment.
+								</p>
+								The game has been in development for nearly a year, outside of full-time university course-work, with a team of all students. 
+								Being the director of such a spirited team has been one of my favorite experiences too date!
+							</div>
+						</div>
+						<div class="window desktop-window" style="position:absolute; right:-14vw; top:5vh; z-index: 100;">
+							<div class="header-container" style="position:relative; width:23vw;">
+								<div class= "name">
+									./tog.gif
+								</div>
+								<div class="button-container">
+									<img src="./images/buttons/closebutton.png">
+									<a href="https://google.com"></a>
+								</div>
+							</div>
+							<div class="content-container">
+								<div class="content project" style="background-image: url(./images/projects/tog/gameplay.gif)">
+									<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="content-container">
-					<div class="content project" style="background-image: url(./images/projects/tog/gameplay.gif)">
-						<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-  </body>
+
+				<div class="column-gap"></div>
+  
+	</div></div></div>
+
+	<div style="height: 100vw;"></div>
+</div>
+</body>

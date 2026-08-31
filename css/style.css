@@ -1,18 +1,58 @@
 body {
 	background-color: white;
-	background-image: url("../images/style/ocean.jpg");
-	background-size: cover;
-	background-repeat: repeat;
+	background-image: url("../images/style/sky_only.png"), url("../images/style/ocean_tile2.png");
+	background-size: 100% auto, 100% auto;
+	background-repeat: repeat-x, repeat-x;
+	background-position-y: 0, 346px;
+	/* background-image: url("../images/style/ocean.jpg");
+	background-size: 100% auto; */
+	background-attachment: fixed;
 	color: black;
 	font-family: Verdana;
 	display: flex;
 	flex-direction: column;
-	--mobile-mode: if(media(width<950px): true; else: false);
-	--border-width: 0.3vw;
+	justify-content: center;
+	margin: 0 auto;
+	width:100%;
+	
+	--mobile-mode: if(media(width<1100px): true; else: false);
+	--border-width: 0.1vw;
+	
+	animation: scrollBackground 60s linear infinite;
 }
+@keyframes scrollBackground {
+  0% {
+    background-position-x: 0, 0;
+  }
+  100% {
+    background-position-x: 0, -1280px; 
+  }
+}
+
+
+.absolute-container {
+	max-width: if(style(--mobile-mode: true):90%; else:60%);
+	margin: 0 auto;
+}
+.container-container {
+	/* max-width: if(style(--mobile-mode: true):90%; else:60%); */
+	background-color: black;
+}
+.contained {
+	max-width: 100%;
+	box-sizing: border-box;
+}
+.column {
+	display: flex;
+	flex-direction: column;
+}
+.column-gap {
+	height:50px;
+}
+
 .main-container {
 	position:relative;
-	width: 90vw;
+	width: 100vw;
 	margin: 0 auto;
 }
 .main-container .title{
@@ -29,6 +69,11 @@ body {
 	overflow: hidden;
 	height: 100%;
 }
+.content{
+	margin: 0;
+
+	min-height:100%;
+}
 
 .row {
 	display: flex;
@@ -40,7 +85,7 @@ body {
 .window {
 	border: var(--border-width) outset rgb(150,150,150);
 	height: fit-content;
-	max-width: 95vw;
+	max-width: 100%;
 }
 .project-window {
 	margin: 0 auto;
@@ -49,8 +94,8 @@ body {
 .desktop-window {
 	visibility: if(style(--mobile-mode: true):hidden; else:visible);
 }
-#introduction-window {
-	
+.introduction-window {
+
 }
 
 .header-container {
@@ -62,7 +107,7 @@ body {
 	background-image: linear-gradient(to right, blue, dodgerblue, dodgerblue, skyblue);
 	box-shadow: inset 0 0 0 var(--border-width) white;
 	color: white;
-	height: 8vh;
+	height: 6vh;
 }
 .header-container .name {
 	flex-grow:1;
@@ -107,7 +152,7 @@ body {
 }
 
 .content-container .content{
-	padding: 0.5vw;
+	padding: 1% 5%;
 
 	flex-grow: 1;
 	order: 1;
