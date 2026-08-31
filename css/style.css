@@ -375,7 +375,8 @@ body {
 #systems-tag,
 #quests-tag,
 #combat-tag,
-#multiplayer-tag {
+#multiplayer-tag,
+#narrative-tag {
 	color: black;
 	border-radius: 20px;
 	padding: 1%;
@@ -395,7 +396,8 @@ body {
 #systems-tag:hover,
 #quests-tag:hover,
 #combat-tag:hover,
-#multiplayer-tag:hover {
+#multiplayer-tag:hover,
+#narrative-tag:hover {
 	/* cursor: pointer; */
 	transform: translate(0px,calc(var(--border-width) * 2));
 	box-shadow:  0 calc(var(--border-width)*-2) 0 0 var(--ocolor);
@@ -458,6 +460,18 @@ body {
 }
 #multiplayer-tag::after{
 	content: "MULTIPLAYER";
+	font-weight: bold;
+	width: fit-content;
+}
+#narrative-tag{
+	order: 5;
+	--color: rgba(255, 79, 56, 0.9);
+	background-color: var(--color);
+	--ocolor: rgba(247, 144, 131, 0.9);
+	border: var(--border-size) outset var(--ocolor);
+}
+#narrative-tag::after{
+	content: "NARRATIVE";
 	font-weight: bold;
 	width: fit-content;
 }
