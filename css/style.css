@@ -308,7 +308,7 @@ body {
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
-#gif{
+.gif{
 	position:absolute; 
 	right:-22vw; 
 	top:-2vw; 
@@ -321,7 +321,7 @@ body {
 	width:23vw;
 }
 
-#text-bubble-header {
+.text-bubble-header {
 	background-color: rgba(255, 255, 255, 0.9);
 	color: black;
 	border: 0.3vw outset white;
@@ -331,8 +331,9 @@ body {
 	font-weight: bold;
 	text-align: center;
 	font-size: 150%;
+	margin-top: 4%;
 }
-#text-bubble-body {
+.text-bubble-body {
 	background-color: rgba(240, 240, 240, 0.8);
 	color: black;
 	border: 0.3vw outset gainsboro;
@@ -340,7 +341,7 @@ body {
 	padding: 1%;
 }
 
-#rounded {
+.rounded {
   position: relative;
   padding: 20px;
   color: white;
@@ -348,7 +349,7 @@ body {
   border-radius: 24px;
   background-color: rgba(255, 255, 255, 0.2);
 }
-#rounded::before {
+.rounded::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -371,12 +372,7 @@ body {
 
 
 
-#level-tag,
-#systems-tag,
-#quests-tag,
-#combat-tag,
-#multiplayer-tag,
-#narrative-tag {
+.tag {
 	color: black;
 	border-radius: 20px;
 	padding: 1%;
@@ -388,90 +384,57 @@ body {
 	margin-bottom: 0.5vw;
 	pointer-events: auto;
 
-	--border-size: 0.3vw;
+	--text: "DEFAULT";
 	--color: white;
 	--ocolor: white;
+
+	background-color: var(--color);
+	border: 0.3vw outset var(--ocolor);
 }
-#level-tag:hover,
-#systems-tag:hover,
-#quests-tag:hover,
-#combat-tag:hover,
-#multiplayer-tag:hover,
-#narrative-tag:hover {
+.tag:hover {
 	/* cursor: pointer; */
 	transform: translate(0px,calc(var(--border-width) * 2));
 	box-shadow:  0 calc(var(--border-width)*-2) 0 0 var(--ocolor);
 }
+.tag::after {
+	content: var(--text);
+	font-weight: bold;
+	width: fit-content;
+}
 
-#level-tag{
+.tag.levels {
 	order: 0;
 	--color: rgba(148, 255, 76, 0.9);
-	background-color: var(--color);
 	--ocolor: rgba(157, 241, 101, 0.9);
-	border: var(--border-size) outset var(--ocolor);
+	--text: "LEVELS";
 }
-#level-tag::after{
-	content: "LEVELS";
-	font-weight: bold;
-	width: fit-content;
-}
-#systems-tag{
+.tag.systems{
 	order: 1;
 	--color: rgba(241, 92, 5, 0.9);
-	background-color: var(--color);
 	--ocolor: rgba(228, 122, 60, 0.9);
-	border: var(--border-size) outset var(--ocolor);
+	--text: "SYSTEMS";
 }
-#systems-tag::after{
-	content: "SYSTEMS";
-	font-weight: bold;
-	width: fit-content;
-}
-#combat-tag{
+.tag.combat{
 	order: 2;
 	--color: rgba(24, 65, 245, 0.9);
-	background-color: var(--color);
 	--ocolor: rgba(71, 104, 255, 0.9);
-	border: var(--border-size) outset var(--ocolor);
+	--text: "COMBAT";
 }
-#combat-tag::after{
-	content: "COMBAT";
-	font-weight: bold;
-	width: fit-content;
-}
-#quests-tag{
+.tag.quests{
 	order: 3;
 	--color: rgba(248, 52, 215, 0.9);
-	background-color: var(--color);
 	--ocolor: rgba(250, 156, 226, 0.9);
-	border: var(--border-size) outset var(--ocolor);
+	--text: "QUESTS";
 }
-#quests-tag::after{
-	content: "QUESTS";
-	font-weight: bold;
-	width: fit-content;
-}
-#multiplayer-tag{
+.tag.multiplayer{
 	order: 4;
 	--color: rgba(56, 209, 255, 0.9);
-	background-color: var(--color);
 	--ocolor: rgba(166, 234, 255, 0.9);
-	border: var(--border-size) outset var(--ocolor);
+	--text: "MULTIPLAYER";
 }
-#multiplayer-tag::after{
-	content: "MULTIPLAYER";
-	font-weight: bold;
-	width: fit-content;
-}
-#narrative-tag{
+.tag.narrative{
 	order: 5;
 	--color: rgba(255, 79, 56, 0.9);
-	background-color: var(--color);
 	--ocolor: rgba(247, 144, 131, 0.9);
-	border: var(--border-size) outset var(--ocolor);
-}
-#narrative-tag::after{
-	content: "NARRATIVE";
-	font-weight: bold;
-	width: fit-content;
+	--text: "NARRATIVE";
 }
