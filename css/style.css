@@ -160,21 +160,19 @@ body {
 	text-align: left;
 	padding-left:1vw;
 	font-family: 'Times New Roman';
-	font-size: 2vw;
+	font-size: 200%;
 }
 .header-container .icon {
+
 	position: relative;
 	overflow: hidden;
-	aspect-ratio:1/1;
-	height:100%;
-	width:auto;
+	height:contain;
+	aspect-ratio: 1/1;
 	box-sizing: border-box;
 }
 .header-container .icon img {
-	image-rendering: pixelated;
-	width:100%;
-	height: auto;
-	position:absolute;
+	height: 100%;
+	width: auto;
 }
 @property --bgc1 {
   syntax: '<percentage>';
@@ -231,6 +229,7 @@ body {
 	height: 100%;
 	width: 100%;
 	color: white;
+	background-clip: border-box;
 }
 .content-container .content{
 	padding: 1% 5%;
@@ -248,7 +247,8 @@ body {
 	text-align: center;
 	aspect-ratio:0.8/1;
 	height:100%;
-	width:auto;
+	/* width: auto; */
+	width:0;
 	background-color: rgb(240,240,240);
 	border: var(--border-width) outset white;
 	box-sizing: border-box;
@@ -295,7 +295,6 @@ body {
 	margin: 0 auto;
 	max-height:400px;
 	max-width: min(100%, 400px);
-	order: 0;
 	flex-grow:3;
 }
 .project .textbox {
@@ -305,18 +304,41 @@ body {
 	flex-basis: 0%;
 	flex-grow:2;
 	padding: 0 1vw 1vw 1vw;
-	font-size: 100%;
+	font-size: 110%;
 	border: 0.3vw outset white;
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 .project .textbox h2{
 	text-align: center;
-	background-color: rgba(255, 255, 255, 0.877);
+	font-family: 'Times New Roman', Times, serif;
+}
+
+#gif{
+	position:absolute; 
+	right:-22vw; 
+	top:-2vw; 
+	z-index: 100;
+	aspect-ratio: 1/0.9;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	scale: 0.8;
+	width:23vw;
+}
+
+#text-bubble-header {
+	background-color: rgba(255, 255, 255, 0.9);
 	color: black;
 	border: 0.3vw outset white;
 	border-radius: 20px;
-	font-family: 'Times New Roman', Times, serif;
-
+	padding: 1%;
+}
+#text-bubble-body {
+	background-color: rgba(240, 240, 240, 0.8);
+	color: black;
+	border: 0.3vw outset gainsboro;
+	border-radius: 20px;
+	padding: 1%;
 }
 
 #rounded {
