@@ -252,6 +252,7 @@ body {
 	background-color: rgb(240,240,240);
 	border: var(--border-width) outset white;
 	box-sizing: border-box;
+	visibility: hidden;
 
 	/*box-shadow: 
 	inset 2px 2px 0 2px darkgray,
