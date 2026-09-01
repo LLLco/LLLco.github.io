@@ -1,6 +1,6 @@
 body {
 	background-color: white;
-	background-image: url("../images/style/sky_only.png"), url("../images/style/ocean_tile2.png");
+	background-image: url("../images/style/sky_only2.png"), url("../images/style/ocean_tile3.png");
 	background-size: 100% auto, 100% auto;
 	background-repeat: repeat-x, repeat;
 	background-position-y: 0, 346px;
@@ -26,13 +26,13 @@ body {
     background-position-x: 0, 0;
   }
   100% {
-    background-position-x: 0, -1280px; 
+    background-position-x: -640px, -1280px; 
   }
 }
 
 
 .absolute-container {
-	max-width: if(style(--mobile-mode: true):90vw; else:60vw);
+	width: if(style(--mobile-mode: true):90vw; else:60vw);
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
@@ -95,128 +95,7 @@ body {
 }
 
 
-.window {
-	border: var(--border-width) outset rgb(150,150,150);
-	/* height: fit-content; */
-	max-width: 100%;
-	overflow: hidden;
-	background-color: black;
 
-	
-	transform-style: preserve-3d;
-	transform: translateZ(-1px);
-}
-.project-window {
-	margin: 0 auto;
-	margin-bottom: 2vh;
-	width: if(style(--mobile-mode: true):95%; else:70vw);
-}
-.desktop-window {
-	visibility: if(style(--mobile-mode: true):hidden; else:visible);
-}
-
-
-.header-container {
-	display: flex;
-	justify-content: flex-end;
-	padding: 0.5vw;
-	box-sizing: border-box;
-	flex-direction: row;
-	background-image: linear-gradient(100deg, skyblue var(--bgc1), dodgerblue var(--bgc2), blue var(--bgc3), dodgerblue var(--bgc4),skyblue var(--bgc5));
-	box-shadow: inset 0 0 0 var(--border-width) white;
-	color: white;
-	
-	pointer-events: auto;
-	animation: headerAnimation var(--header-anim-time) linear infinite;
-
-	aspect-ratio: if(style(--mobile-mode: true): 6/1; else:16/1);
-}
-.header-container .name {
-	
-	flex-grow:1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	overflow:hidden;
-	text-align: left;
-	padding-left:1vw;
-	font-family: 'Times New Roman';
-	font-size: if(style(--mobile-mode: true): 5cqw; else:3cqw;);
-}
-.header-container .icon {
-	box-sizing: border-box;
-}
-.header-container .icon img {
-	height: 100%;
-	width: auto;
-}
-@property --bgc1 {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 5%;
-}
-@property --bgc2 {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 10%;
-}
-@property --bgc3 {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 20%;
-}
-@property --bgc4 {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 30%;
-}
-@property --bgc5 {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 60%;
-}
-@keyframes headerAnimation {
-  0% {
-	--bgc1: -100%;
-	--bgc2: -70%;
-	--bgc3: -50%;
-	--bgc4: -30%;
-	--bgc5: 0%;
-  }
-  100% {
-	--bgc1: 100%;
-	--bgc2: 130%;
-	--bgc3: 150%;
-	--bgc4: 200%;
-	--bgc5: 220%;
-  }
-}
-
-.content-container{
-	pointer-events: none;
-	position:relative;
-	display: flex;
-	flex-direction: row;
-	box-sizing: border-box;
-	border: var(--border-width) solid white;
-	border-top: none;
-	box-shadow: 
-		inset calc(var(--border-width)/2) calc(var(--border-width)/2) 0 calc(var(--border-width)/2) darkgray,
-		inset 0 0 0 var(--border-width) gainsboro;
-	height: 100%;
-	width: 100%;
-	color: white;
-	background-clip: border-box;
-}
-.content-container .content{
-	padding: if(style(--mobile-mode: true): 1% 0%; else:1% 3%;);
-
-	flex-grow: 1;
-	order: 1;
-	z-index: -1;
-	max-height: 100%;
-	/*font-size:1vw;*/
-}
 
 
 .button-container {
@@ -385,69 +264,3 @@ body {
 
 
 
-.tag {
-	color: black;
-	border-radius: 20px;
-	padding: 1%;
-	height: 0.5vw;
-	font-size: 75%;
-	display: flex;
-	align-items: center; 
-	justify-content: center; 
-	margin-bottom: 0.5vw;
-	pointer-events: auto;
-
-	--text: "DEFAULT";
-	--color: white;
-	--ocolor: white;
-
-	background-color: var(--color);
-	border: 0.3vw outset var(--ocolor);
-}
-.tag:hover {
-	/* cursor: pointer; */
-	transform: translate(0px,calc(var(--border-width) * 2));
-	box-shadow:  0 calc(var(--border-width)*-2) 0 0 var(--ocolor);
-}
-.tag::after {
-	content: var(--text);
-	font-weight: bold;
-	width: fit-content;
-}
-
-.tag.levels {
-	order: 0;
-	--color: rgba(148, 255, 76, 0.9);
-	--ocolor: rgba(157, 241, 101, 0.9);
-	--text: "LEVELS";
-}
-.tag.systems{
-	order: 1;
-	--color: rgba(241, 92, 5, 0.9);
-	--ocolor: rgba(228, 122, 60, 0.9);
-	--text: "SYSTEMS";
-}
-.tag.combat{
-	order: 2;
-	--color: rgba(24, 65, 245, 0.9);
-	--ocolor: rgba(71, 104, 255, 0.9);
-	--text: "COMBAT";
-}
-.tag.quests{
-	order: 3;
-	--color: rgba(248, 52, 215, 0.9);
-	--ocolor: rgba(250, 156, 226, 0.9);
-	--text: "QUESTS";
-}
-.tag.multiplayer{
-	order: 4;
-	--color: rgba(56, 209, 255, 0.9);
-	--ocolor: rgba(166, 234, 255, 0.9);
-	--text: "MULTIPLAYER";
-}
-.tag.narrative{
-	order: 5;
-	--color: rgba(255, 79, 56, 0.9);
-	--ocolor: rgba(247, 144, 131, 0.9);
-	--text: "NARRATIVE";
-}

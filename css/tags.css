@@ -1,0 +1,66 @@
+.tag {
+	color: black;
+	border-radius: 20px;
+	padding: 1%;
+	height: 0.5vw;
+	font-size: 75%;
+	display: flex;
+	align-items: center; 
+	justify-content: center; 
+	margin-bottom: 0.5vw;
+	pointer-events: auto;
+
+	--text: "DEFAULT";
+	--color: white;
+	--ocolor: white;
+
+	background-color: var(--color);
+	border: 0.3vw outset var(--ocolor);
+}
+.tag:hover {
+	/* cursor: pointer; */
+	transform: translate(0px,calc(var(--border-width) * 2));
+	box-shadow:  0 calc(var(--border-width)*-2) 0 0 var(--ocolor);
+}
+.tag::after {
+	content: var(--text);
+	font-weight: bold;
+	width: fit-content;
+}
+
+.tag.levels {
+	order: 0;
+	--color: rgba(148, 255, 76, 0.9);
+	--ocolor: rgba(157, 241, 101, 0.9);
+	--text: "LEVELS";
+}
+.tag.systems{
+	order: 1;
+	--color: rgba(241, 92, 5, 0.9);
+	--ocolor: rgba(228, 122, 60, 0.9);
+	--text: "SYSTEMS";
+}
+.tag.combat{
+	order: 2;
+	--color: rgba(24, 65, 245, 0.9);
+	--ocolor: rgba(71, 104, 255, 0.9);
+	--text: "COMBAT";
+}
+.tag.quests{
+	order: 3;
+	--color: rgba(248, 52, 215, 0.9);
+	--ocolor: rgba(250, 156, 226, 0.9);
+	--text: "QUESTS";
+}
+.tag.multiplayer{
+	order: 4;
+	--color: rgba(56, 209, 255, 0.9);
+	--ocolor: rgba(166, 234, 255, 0.9);
+	--text: "MULTIPLAYER";
+}
+.tag.narrative{
+	order: 5;
+	--color: rgba(255, 79, 56, 0.9);
+	--ocolor: rgba(247, 144, 131, 0.9);
+	--text: "NARRATIVE";
+}
