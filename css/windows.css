@@ -12,7 +12,8 @@
 .project-window {
 	margin: 0 auto;
 	margin-bottom: 2vh;
-	width: if(style(--mobile-mode: true):95%; else:70vw);
+	width: if(style(--mobile-mode: true):95%; else:98%);
+	position: relative;
 }
 .desktop-window {
 	visibility: if(style(--mobile-mode: true):hidden; else:visible);
@@ -22,7 +23,7 @@
 .header-container {
 	display: flex;
 	justify-content: flex-end;
-	padding: 0.5vw;
+	padding: 0.75%;
 	box-sizing: border-box;
 	flex-direction: row;
 	background-image: linear-gradient(100deg, skyblue var(--bgc1), dodgerblue var(--bgc2), blue var(--bgc3), dodgerblue var(--bgc4),skyblue var(--bgc5));
@@ -36,7 +37,6 @@
 }
 .website-header .header-container{
 	aspect-ratio: if(style(--mobile-mode: true): 6/1; else:8/1);
-    
 }
 
 .header-container .name {
@@ -47,9 +47,9 @@
 	justify-content: center;
 	overflow:hidden;
 	text-align: left;
-	padding-left:1vw;
+	padding-left:1%;
 	font-family: 'Times New Roman';
-	font-size: if(style(--mobile-mode: true): 5cqw; else:3cqw;);
+	font-size: if(style(--mobile-mode: true): 120%; else:300%;);
 }
 .header-container .icon {
 	box-sizing: border-box;
@@ -115,6 +115,7 @@
 	width: 100%;
 	color: white;
 	background-clip: border-box;
+	background-size: cover;
 }
 .content-container .content{
 	padding: if(style(--mobile-mode: true): 1% 0%; else:1% 3%;);
@@ -123,5 +124,4 @@
 	order: 1;
 	z-index: -1;
 	max-height: 100%;
-	/*font-size:1vw;*/
 }

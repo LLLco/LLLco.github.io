@@ -16,11 +16,14 @@
 
 	background-color: var(--color);
 	border: 0.3vw outset var(--ocolor);
+
+	transform: translate(0px,calc(var(--border-width) * 2));
+	box-shadow:  0 calc(var(--border-width)*-2) 0 0 var(--ocolor);
 }
 .tag:hover {
 	/* cursor: pointer; */
-	transform: translate(0px,calc(var(--border-width) * 2));
-	box-shadow:  0 calc(var(--border-width)*-2) 0 0 var(--ocolor);
+	transform: translate(0,0);
+	box-shadow: 0 0 0 0 transparent;
 }
 .tag::after {
 	content: var(--text);

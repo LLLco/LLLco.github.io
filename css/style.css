@@ -15,8 +15,9 @@ body {
 	margin: 0 auto;
 	width:100%;
 	
-	--mobile-mode: if(media(width<1450px): true; else: false);
-	--border-width: 0.1vw;
+	--desktop-width:1152px;
+	--mobile-mode: if(media(width<1152px): true; else: false);
+	--border-width: 1.5px;
 	--header-anim-time: 10s;
 	
 	animation: scrollBackground 60s linear infinite;
@@ -32,7 +33,7 @@ body {
 
 
 .absolute-container {
-	width: if(style(--mobile-mode: true):90vw; else:60vw);
+	width: if(style(--mobile-mode: true):90vw; else:var(--desktop-width));
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
@@ -57,17 +58,15 @@ body {
 .navbar {
 	display: flex;
 	justify-content: flex-end;
-	padding: 0vw;
+	padding: 0;
 	box-sizing: border-box;
 	flex-direction: row;
-	background-image: linear-gradient(to right, white);
+	background-color:black;
 	box-shadow: inset 0 0 0 var(--border-width) white;
 	color: white;
 	height: 6vh;
 	width: 100%;
-	margin-top: 0.5vh;
-	margin-bottom: 0.5vh;
-	
+	margin-bottom: 1vh;
 }
 .navbar .element {
 	position:relative;
@@ -75,66 +74,36 @@ body {
 	height:100%;
 	width:auto;
 	flex-basis: 100%;
-	background-color: #fcffd8;
-	/* background-color: #A3FF1E; */
+	background-color: white;
 	border: var(--border-width) outset white;
 	box-sizing: border-box;
-	font-size: 2vw;
-	color: #94967e; 
-	-webkit-text-stroke: 0.01vw #d6d8c1;
+	font-size: 200%;
+	color: hsl(0, 0%, 20%); 
+	font-weight: bold;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
 	/*box-shadow: 
 	inset 2px 2px 0 2px darkgray,
 	inset 0 0 0 4px gainsboro;*/
 }
 .navbar .element:hover {
-	/*background-color: rgb(220,220,220);*/
 	cursor: pointer;
-	transform: translate(0px,calc(var(--border-width) * -1));
+	transform: translate(0px,calc(var(--border-width) * -2));
 	box-shadow:  0 var(--border-width) 0 0 black;
+	z-index: 1;
 }
 
 
-
-
-
-.button-container {
-	position:relative;
-	text-align: center;
-	aspect-ratio:0.8/1;
-	height:100%;
-	/* width: auto; */
-	width:0;
-	background-color: rgb(240,240,240);
-	border: var(--border-width) outset white;
-	box-sizing: border-box;
-	visibility: hidden;
-
-	/*box-shadow: 
-	inset 2px 2px 0 2px darkgray,
-	inset 0 0 0 4px gainsboro;*/
+.copyright {
+	font-size: 80%; 
+	font-family: 'MS UI Gothic', sans-serif;
+	font-style: italic;
 }
-.button-container a {
-	position:relative;
-	display: block;
-	width:100%;
-	height:100%;
-	z-index: 100;
-}
-.button-container img {
-	image-rendering: pixelated;
-	width:90%;
-	height: auto;
-	position:absolute;
-	top:50%;
-	left:50%;
-	transform: translate(-50%,-50%);
-}
-.button-container:hover {
-	/*background-color: rgb(220,220,220);*/
-	cursor: pointer;
-	transform: translate(0px,calc(var(--border-width) * -1));
-	box-shadow:  0 var(--border-width) 0 0 black;
+.copyright::after{
+	content: "copyright © 2026 Liam Burley";
 }
 
 
@@ -145,7 +114,7 @@ body {
 	background-position: center;
 	background-size: cover;
 	background-blend-mode: multiply;
-	gap: 1vw;
+	gap: 2%
 }
 .project .icon {
 	margin: 0 auto;
@@ -162,15 +131,33 @@ body {
 	flex-direction: column; 
 	flex-basis: 0%;
 	flex-grow:2;
-	padding: 0 1vw 1vw 1vw;
+	padding: 1%;
 	font-size: 110%;
-	border: 0.3vw outset white;
+	border: calc(var(--border-width)*3) outset white;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .project .icon:hover{
 	animation: pIconHover var(--duration) forwards;
 	--duration: 0.5s;
 	cursor: pointer;
+}
+.engine {
+	position:absolute;
+	bottom: 0;
+	right: 0;
+	width:12%;
+	aspect-ratio: 1/1;
+	pointer-events: auto;
+}
+.engine img{
+	height: 100%;
+	width: 100%;
+	display: block;
+	filter: drop-shadow(calc(-1px * calc(100%/40%)) calc(-1px * calc(100%/40%))  rgba(0, 0, 0, 1));
+}
+.engine img:hover{
+	transform: translate(-5%, -5%);
+	filter: drop-shadow(0 0 transparent);
 }
 @keyframes pIconHover {
 	from {
@@ -194,18 +181,6 @@ body {
 }
 
 
-.gif{
-	position:absolute; 
-	right:-22vw; 
-	top:-2vw; 
-	z-index: 100;
-	aspect-ratio: 1/0.9;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	scale: 0.8;
-	width:23vw;
-}
 
 .text-bubble{
 	padding: 1%;
@@ -214,7 +189,7 @@ body {
 .text-bubble .header {
 	background-color: rgba(255, 255, 255, 0.9);
 	color: black;
-	border: 0.3vw outset white;
+	border: calc(var(--border-width)*3) outset white;
 	border-radius: 20px;
 	
 	font-family: 'Times New Roman', Times, serif;
@@ -227,13 +202,13 @@ body {
 .text-bubble .body {
 	background-color: rgba(240, 240, 240, 0.8);
 	color: black;
-	border: 0.3vw outset gainsboro;
+	border: calc(var(--border-width)*3) outset gainsboro;
 	border-radius: 20px;
 	box-sizing: border-box;
 	padding: 1%;
 	font-size: 140%;
-	
 }
+
 
 .rounded {
   position: relative;
