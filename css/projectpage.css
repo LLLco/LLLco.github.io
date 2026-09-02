@@ -22,11 +22,9 @@
     width:100%;
     height:4vh;
 
-    background-color: white;
     background-repeat: no-repeat, no-repeat;
     border-bottom: calc(var(--border-width)*1.5) solid hsl(0, 0%, 66%);;
     
-    color: black;
     font-family: 'Times New Roman', Times, serif;
     display: flex;
     flex-direction: column;
@@ -35,6 +33,17 @@
     
     top: calc(var(--border-width)*1);
     z-index: 0;
+}
+#navcolumn .element.back{
+    color: white;
+    background-color: red;
+}
+#navcolumn .element.back::after{
+    content: "BACK"
+}
+#navcolumn .element.menu{
+    color: black;
+    background-color: white;
 }
 #navcolumn .element:hover{
     cursor: pointer;
