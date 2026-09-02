@@ -1,19 +1,30 @@
 const navcolumn = document.getElementById("navcolumn");
 var buttons = [];
+var active;
 
-document.getElementById("MAIN").classList.toggle("hidden");
+
 
 for (const child of navcolumn.children) {
     if (child.id == "BACK") { continue; }
+    if (child.textContent == "MAIN") {active = child;}
+
     buttons.push(child)
     child.addEventListener("click", handleClick);
+    child.classList.toggle("active", false);
 }
 
-function handleClick() {
-    for (const b of buttons) {
-        const element = document.getElementById(b.textContent);
-        if (element == null) { continue; }
+document.getElementById(active.textContent).classList.toggle("hidden", false);
+active.classList.toggle("active", true);
 
-        element.classList.toggle("hidden", (b.textContent != event.target.textContent));
-    }
+function handleClick() {
+    const element = document.getElementById(event.target.textContent);
+    const current = document.getElementById(active.textContent)
+    
+    active.classList.toggle("active", false);
+    event.target.classList.toggle("active", true);
+    active = event.target;
+
+    if (element != null) {element.classList.toggle("hidden", false);}
+    if (current != null) {current.classList.toggle("hidden", true);}
+    
 }
