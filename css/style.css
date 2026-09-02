@@ -53,6 +53,11 @@ body {
 .website-header {
 	margin-bottom: 1vh;
 }
+.hidden {
+	visibility: hidden;
+	height: 0;
+	width: 0;
+}
 
 
 .navbar {
