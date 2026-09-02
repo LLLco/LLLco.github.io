@@ -1,0 +1,1 @@
+const navcolumn = document.getElementById("navcolumn");

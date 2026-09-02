@@ -1,10 +1,7 @@
 
-#navtab {
-    
-}
 
 
-.navcolumn{
+#navcolumn{
     
     z-index: 1;
     pointer-events: auto;
@@ -21,7 +18,7 @@
 
 }
 
-.navcolumn .element{
+#navcolumn .element{
     width:100%;
     height:4vh;
 
@@ -39,7 +36,7 @@
     top: calc(var(--border-width)*1);
     z-index: 0;
 }
-.navcolumn .element:hover{
+#navcolumn .element:hover{
     cursor: pointer;
     z-index: 100;
 	transform: translate(0px,calc(var(--border-width) * -1));

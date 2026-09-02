@@ -1,0 +1,1 @@
+document.getElementById("thing").textContent = "YAH this script is working. yup";
