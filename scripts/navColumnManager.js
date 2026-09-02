@@ -8,8 +8,6 @@ for (const child of navcolumn.children) {
     if (child.id == "BACK") { continue; }
     buttons.push(child)
     child.addEventListener("click", handleClick);
-
-    console.log(buttons);
 }
 
 function handleClick() {
