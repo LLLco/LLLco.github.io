@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<title>dekkerd | bjorlidev</title>
+	<title>bjorlidev | project A</title>
 	<link rel="stylesheet" href="./css/style.css" type="text/css" media="all">
 	<link rel="stylesheet" href="./css/windows.css" type="text/css" media="all">
 	<link rel="stylesheet" href="./css/projectpage.css" type="text/css" media="all">
@@ -37,13 +37,13 @@
 		<div class="content-container">
 			<div class="content row" style="background-color: black; padding: 0;">
 				<div id="navcolumn">
-					<div class="element">MAIN</div>
-					<div class="element">CONTENT A</div>
-					<div class="element">CONTENT B</div>
-					<div class="element">CONTENT C</div>
+					<button class="element">MAIN</button>
+					<button class="element">CONTENT A</button>
+					<button class="element">CONTENT B</button>
+					<button class="element">CONTENT C</button>
 				</div>
 				<div class="column" style="height:100%; padding: 1%;">
-					<div class="column">
+					<div class="column hidden" id="MAIN">
 						<div>
 							this is some text about the game lowkey
 							<div class="window" style="width:20cqw; aspect-ratio: 1/1; background-image: url(./images/projects/skywind/gameplay.gif);">
@@ -56,8 +56,17 @@
 						</div>
 					</div>
 
+					<div class="column hidden" id="CONTENT A">
+						<div>
+							<br><br>
+							I am content A. behold
+							<br><br><br><br><br><br><br><br><br>
+						</div>
+					</div>
+
 					<div class="copyright"></div>
 				</div>
+				
 			</div>
 		</div>
 	</div>
