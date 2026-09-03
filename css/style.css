@@ -81,7 +81,8 @@ body {
 	border: var(--border-width) outset white;
 	box-sizing: border-box;
 	font-size: 200%;
-	color: hsl(0, 0%, 20%); 
+	/* color: hsl(0, 0%, 20%);  */
+	color: white;
 	font-weight: bold;
 
 	display: flex;
