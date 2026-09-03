@@ -1,13 +1,13 @@
 .tag {
 	color: black;
 	border-radius: 20px;
-	padding: 1%;
-	height: 0.5vw;
+	padding: 5px;
+	height: 10px;
 	font-size: 75%;
 	display: flex;
 	align-items: center; 
 	justify-content: center; 
-	margin-bottom: 0.5vw;
+	margin-bottom: 10px;
 	pointer-events: auto;
 
 	--text: "DEFAULT";
@@ -15,7 +15,7 @@
 	--ocolor: white;
 
 	background-color: var(--color);
-	border: 0.3vw outset var(--ocolor);
+	border: calc(var(--border-width) * 3) outset var(--ocolor);
 
 	transform: translate(0px,calc(var(--border-width) * 2));
 	box-shadow:  0 calc(var(--border-width)*-2) 0 0 var(--ocolor);
