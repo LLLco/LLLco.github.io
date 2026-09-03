@@ -43,6 +43,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	max-width: var(--desktop-width);
+	width:100%;
 }
 .contained {
 	max-width: 100%;
