@@ -44,6 +44,16 @@
 	border: calc(var(--border-width)*3) outset white;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+.textbox .details {
+    font-size: 1.15rem;
+}
+.textbox .body {
+    font-size: 1.15rem;
+    box-sizing: border-box;
+}
+.textbox ul {
+    margin: 0;
+}
 .project .icon:hover{
 	animation: pIconHover var(--duration) forwards;
 	--duration: 0.5s;
