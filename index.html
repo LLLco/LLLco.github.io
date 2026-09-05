@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="./css/tags.css" type="text/css" media="all">
 	<link rel="stylesheet" href="./css/windows.css" type="text/css" media="all">
 	<link rel="stylesheet" href="./css/style.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/projpanels.css" type="text/css" media="all">
 	<link rel="icon" type="image/png" href="./images/style/favicon.png">
   </head>
   
@@ -56,19 +57,25 @@
 							<br><br><br><br><br><br>
 							<div class="copyright"></div>
 						</div>
-						<div class="window desktop-window column" style="position: absolute; right: 5%; top: 20%; height: 70%; aspect-ratio: 1/1.1;">
-							<div class="header-container">
-								<div class= "name" style=" font-size:1.5rem;">./me.png</div>
+						<div class="desktop-window">
+							<div class="window column" style="position: absolute; right: 5%; top: 20%; height: 70%; aspect-ratio: 1/1.1;">
+								<div class="header-container">
+									<div class= "name" style=" font-size:1.5rem;">./me.png</div>
+								</div>
+								<div class="content-container" style="height: 100%; background-image: url(./images/about/me.jpg)"></div>
 							</div>
-							<div class="content-container" style="height: 100%; background-image: url(./images/about/me.jpg)"></div>
 						</div>
 	</div></div></div></div></div>
 	
-	<div class="navbar desktop-window">
+	<br>
+
+	<div class="hidden">
+	<div class="navbar">
 		<div class="element column"> PROJECTS </div>
 		<div class="element"> ABOUT ME</div>
 		<div class="element"> FAVORITES </div>
 		<div class="element"> BLOG </div>
+	</div>
 	</div>
 
 	<div class="window">
@@ -77,73 +84,75 @@
 			<div class= "name">PROJECTS</div>
 		</div>
 		<div class="content-container">
-			<div class="content contained">
+			<div class="content contained column" style="gap:2vh">
 
 				<!--SKYWIND-->
 				<div>
-					<div class="window project-window">
-						<div class="header-container">
-							<img src="./images/projects/skywind/logo.png">
-							<div class= "name">SKYWIND</div>
-							<a href="https://tesrskywind.com/"><img src="./images/resources/stores/generic.png"></a>
-						</div>
-						<div class="content-container">
-							<div class="content project" style="background-image: url('./images/projects/skywind/background.jpg');">
-								<a href="./project_pages/skywind.html"><img src="./images/projects/skywind/logo.png" class="icon"></a>
-								<div class="textbox rounded">
-									<div class="text-bubble">
-										<div class="header">LEVEL DESIGNER</div>
-										<div class="row">
-											<div class="tag levels"></div>
-										</div>
-										<div class="body">
-											TESR: Skywind is a full community remaster of one of my favorite games ever made, The Elder Scrolls III: Morrowind. 
-											It has been an absolute pleasure to work on!
-											<br><br>
-											Skywind has been in development since 2016, and is currently still in active progress.
-										</div>
-									</div>
-									<div class= "engine"><img src="./images/resources/engines/scke-square.png"></div>
-								</div>
-							</div>
-						</div></div></div>
-
-
-				<!--TOWER OF GENN-->
-				<div class="window project-window" style="position:relative; top:0vh; z-index: 100;">
+				<div class="window">
 					<div class="header-container">
-						<img src="./images/projects/tog/logo_alt_2.png">
-						<div class= "name">TOWER OF GENN</div>
-						<a href="https://store.steampowered.com/app/4602770/Tower_of_Genn/"><img src="./images/resources/stores/steam.png"></a>
-						<a href="https://dekkerd.itch.io/tower-of-genn"><img src="./images/resources/stores/itch.png"></a>
+						<img src="./images/projects/skywind/logo.png">
+						<div class= "name">SKYWIND</div>
+						<a href="https://tesrskywind.com/"><img src="./images/resources/stores/generic.png"></a>
 					</div>
 					<div class="content-container">
-						<div class="content project" style="background-image: url('./images/projects/tog/background.png'); background-color: rgba(53, 76, 95, 0.774);">
-							<a href="./project_pages/project_template.html"><img src="./images/projects/tog/logo_alt_2.png" class="icon"></a>
+						<div class="content project" style="background-image: url('./images/projects/skywind/background.jpg');">
+							<a href="./project_pages/skywind.html"><img src="./images/projects/skywind/logo.png" class="icon"></a>
 							<div class="textbox rounded">
 								<div class="text-bubble">
-									<div class="header">GAME DIRECTOR</div>
+									<div class="header">LEVEL DESIGNER</div>
 									<div class="row">
 										<div class="tag levels"></div>
-										<div class="tag systems"></div>
-										<div class="tag quests"></div>
-										<div class="tag narrative"></div>
 									</div>
 									<div class="body">
-										Tower of Genn is a puzzle-strategy building game in which the player must stack various shapes in order to grow their tower.
+										TESR: Skywind is a full community remaster of one of my favorite games ever made, The Elder Scrolls III: Morrowind. 
+										It has been an absolute pleasure to work on!
 										<br><br>
-										The game has been in development for nearly a year, outside of full-time university course-work, with a team of all students. 
-										Being the director of such a spirited team has been one of my favorite experiences to date!
+										Skywind has been in development since 2016, and is currently still in active progress.
 									</div>
 								</div>
-								<div class="engine"><img src="./images/resources/engines/godot.svg"></div>
+								<div class= "engine"><img src="./images/resources/engines/scke-square.png"></div>
+							</div>
+						</div>
+					</div></div>
+				</div>
+
+				<!--TOWER OF GENN-->
+				<div>
+					<div class="window">
+						<div class="header-container">
+							<img src="./images/projects/tog/logo_alt_2.png">
+							<div class= "name">TOWER OF GENN</div>
+							<a href="https://store.steampowered.com/app/4602770/Tower_of_Genn/"><img src="./images/resources/stores/steam.png"></a>
+							<a href="https://dekkerd.itch.io/tower-of-genn"><img src="./images/resources/stores/itch.png"></a>
+						</div>
+						<div class="content-container">
+							<div class="content project" style="background-image: url('./images/projects/tog/background.png'); background-color: rgba(53, 76, 95, 0.774);">
+								<a href="./project_pages/project_template.html"><img src="./images/projects/tog/logo_alt_2.png" class="icon"></a>
+								<div class="textbox rounded">
+									<div class="text-bubble">
+										<div class="header">GAME DIRECTOR</div>
+										<div class="row">
+											<div class="tag levels"></div>
+											<div class="tag systems"></div>
+											<div class="tag quests"></div>
+											<div class="tag narrative"></div>
+										</div>
+										<div class="body">
+											Tower of Genn is a puzzle-strategy building game in which the player must stack various shapes in order to grow their tower.
+											<br><br>
+											The game has been in development for nearly a year, outside of full-time university course-work, with a team of all students. 
+											Being the director of such a spirited team has been one of my favorite experiences to date!
+										</div>
+									</div>
+									<div class="engine"><img src="./images/resources/engines/godot.svg"></div>
+								</div>
 							</div>
 				</div></div></div>
 
 
 				<!--TRIBOX-->
 				<div>
-					<div class="window project-window">
+					<div class="window">
 						<div class="header-container">
 							<img src="./images/projects/tribox/logo.png">
 							<div class= "name">TRIBOX</div>
@@ -177,7 +186,7 @@
 
 				<!--GROG-->
 				<div>
-					<div class="window project-window">
+					<div class="window">
 						<div class="header-container">
 							<img src="./images/projects/grog/logo.jpg">
 							<div class= "name">GROG</div>
@@ -209,7 +218,7 @@
 
 				<!--BREAKER-->
 				<div class="hidden">
-					<div class="window project-window">
+					<div class="window">
 						<div class="header-container">
 							<img src="./images/projects/breaker/logo.png">
 							<div class= "name">BREAKER</div>
