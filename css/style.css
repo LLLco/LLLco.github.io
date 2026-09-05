@@ -7,6 +7,11 @@
 		--desktop-width:90vw;
 	}
 }
+@media screen and (max-width: 500px) {
+	:root {
+		--desktop-width:100vw;
+	}
+}
 
 body {
 	background-color: white;
@@ -27,13 +32,6 @@ body {
 	
 	--desktop-cutoff:1152px;
 
-	
-
-	
-	
-	
-	
-	
 	animation: scrollBackground 60s linear infinite;
 }
 @keyframes scrollBackground {
@@ -50,8 +48,9 @@ body {
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
+	
 	max-width: var(--desktop-width);
-	min-width: 400px;
+	min-width: 300px;
 	width:100%;
 }
 .contained {

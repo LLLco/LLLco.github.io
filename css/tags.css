@@ -1,14 +1,22 @@
+.tagrow {
+	min-width: 0;
+	container-type: inline-size;
+}
+
 .tag {
 	color: black;
 	border-radius: 20px;
 	padding: 5px;
-	height: 10px;
-	font-size: 75%;
+	height: 25px;
+	font-size: clamp(0%,3.5cqw,70%);
 	display: flex;
 	align-items: center; 
 	justify-content: center; 
 	margin-bottom: 10px;
+	box-sizing: border-box;
 	pointer-events: auto;
+
+	overflow: hidden;
 
 	--text: "DEFAULT";
 	--color: white;
@@ -19,6 +27,11 @@
 
 	transform: translate(0px,calc(var(--border-width) * 2));
 	box-shadow:  0 calc(var(--border-width)*-2) 0 0 var(--ocolor);
+
+	min-width: 0;
+	flex: 0 1 auto;
+	max-width: 30%;
+	
 }
 .tag:hover {
 	/* cursor: pointer; */
@@ -28,7 +41,6 @@
 .tag::after {
 	content: var(--text);
 	font-weight: bold;
-	width: fit-content;
 }
 
 .tag.levels {

@@ -2,7 +2,7 @@
 	--project-window-width: 98%;
     --panel-flex: row;
 }
-@media screen and (max-width: 1151px) {
+@media screen and (max-width: 900px) {
 	:root {
 		--project-window-width: 95%;
         --panel-flex: column;
@@ -43,6 +43,8 @@
 	font-size: 110%;
 	border: calc(var(--border-width)*3) outset white;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+	
 }
 .textbox .details {
     font-size: 1.15rem;
