@@ -57,8 +57,8 @@
 }
 .tag.combat{
 	order: 2;
-	--color: rgba(24, 65, 245, 0.9);
-	--ocolor: rgba(71, 104, 255, 0.9);
+	--color: rgba(255, 239, 93, 0.9);
+	--ocolor: rgba(255, 247, 174, 0.9);
 	--text: "COMBAT";
 }
 .tag.quests{
