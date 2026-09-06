@@ -13,15 +13,56 @@
 	}
 }
 
+.background {
+	container-type: inline-size;
+	position: fixed;
+	top: 0;
+	left: 0;
+	
+	min-width: 1920px;
+	height:100%;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+}
+.bg-halves {
+	width: 100%;
+	height: fit-content;
+
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+	object-fit: cover;
+
+}
+.bg-halves .top {
+	object-fit: cover;
+	aspect-ratio: 1280/346;
+
+	background-size: cover;
+	background-image: url(../images/style/sky_only2.png);
+	animation: scrollBackground 120s linear infinite;
+}
+.bg-halves .bot {
+	object-fit: cover;
+	aspect-ratio: 1280/507;
+	flex: 1;
+	background-size: cover;
+	background-image: url(../images/style/ocean_tile3.png);
+	animation: scrollBackground 60s linear infinite;
+}
+
 body {
-	background-color: white;
+	/* background-color: white;
 	background-image: url("../images/style/sky_only2.png"), url("../images/style/ocean_tile3.png");
-	background-size: 100% auto, 100% auto;
+	background-size: cover, cover;
 	background-repeat: repeat-x, repeat;
 	background-position-y: 0, 346px;
-	/* background-image: url("../images/style/ocean.jpg");
-	background-size: 100% auto; */
-	background-attachment: fixed;
+	background-attachment: fixed; */
+	
+	background-color: rgb(46, 86, 139);
+	
 	color: black;
 	font-family: Verdana;
 	display: flex;
@@ -32,14 +73,14 @@ body {
 	
 	--desktop-cutoff:1152px;
 
-	animation: scrollBackground 60s linear infinite;
+	
 }
 @keyframes scrollBackground {
   0% {
-    background-position-x: 0, 0;
+    background-position-x: 0;
   }
   100% {
-    background-position-x: -640px, -1280px; 
+    background-position-x: calc(clamp(1280px,100cqw,100cqw) * -1);
   }
 }
 
