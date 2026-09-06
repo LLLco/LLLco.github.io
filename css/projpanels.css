@@ -35,6 +35,7 @@
 }
 .project .textbox {
 	order: 1;
+	pointer-events: auto;
 	display:flex; 
 	flex-direction: column; 
 	flex-basis: 0%;
@@ -43,9 +44,20 @@
 	font-size: 110%;
 	border: calc(var(--border-width)*3) outset white;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.plink {
+	position: absolute;
+	left:0;
+	bottom:0;
+	pointer-events: auto;
+	
+	font-size:120%;
 
+	font-weight: bold;
+	text-align: center;
 	
 }
+
 .textbox .details {
     font-size: 1.15rem;
 }

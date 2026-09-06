@@ -196,6 +196,19 @@ body {
 	box-sizing: border-box;
 	padding: 2%;
 }
+.text-bubble .custom {
+	background-color: rgba(255, 255, 255, 0.9);
+	border: calc(var(--border-width)*3) outset white;
+	border-radius: 20px;
+	
+	scale:0.97;
+	font-family: 'Times New Roman', Times, serif;
+	padding: 1%;
+	margin-top: 0%;
+}
+.text-bubble .custom:hover {
+	background-color: hsla(0, 0%, 70%, 0.9);
+}
 
 
 .rounded {
