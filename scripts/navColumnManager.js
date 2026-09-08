@@ -2,10 +2,15 @@ const navcolumn = document.getElementById("navcolumn");
 var buttons = [];
 var active;
 
-
+const link = document.createElement("link");
+link.rel = "stylesheet";
+link.type = "text/css";
+link.href = "../css/navcolumn.css";
+document.head.appendChild(link);
 
 for (const child of navcolumn.children) {
     if (child.id == "BACK") { continue; }
+    if (child.classList.contains("divider") == true) { continue; }
     if (child.textContent == "MAIN") {active = child;}
 
     buttons.push(child)

@@ -14,6 +14,8 @@
 
 </head>
 
+
+
 <body>
 	<div class="background">
 		<div class="bg-halves">
@@ -22,6 +24,8 @@
 		</div>
 	</div>
 	<div class="absolute-container">
+
+	<script src="../scripts/navColumnManager.js" defer></script>
 
 	<!--WEBSITE HEADER-->
 	<div class= "window website-header" >
@@ -37,12 +41,19 @@
 			<div class= "name">./introduction</div>
 		</div>
 		<div class="content-container">
-			<div class="content" style="background-color: black;">
-				<div>
+			<div class="content row" style="background-color: black; padding: 0;">
+				<div id="navcolumn">
+					<a href="../index.html" id="BACK"><div class="element back"></div></a>
+					<button class="element menu active">MAIN</button>
+					<button class="element menu active">CONTENT A</button>
+					<button class="element menu active">CONTENT B</button>
+					<button class="element menu active">CONTENT C</button>
+				</div>
+				<div class="column" style="padding:1%">
 					<div style="font-size: 2.5rem">
 						<b>I'm Liam Burley, a Level Designer !!</b>
 					</div>
-						(<i>and all-around Game Developer !!</i>) <br><br>
+						<i>(and all-around Game Developer !!)</i> <br><br>
 					<div class="row" style="pointer-events: auto;">
 						<div style="padding-right: 5%; box-sizing: border-box;">
 							
@@ -72,10 +83,9 @@
 							</div>
 						</div>
 	</div></div></div></div></div>
-	
-	<br>
 
-	<div class="hidden">
+
+	<div class="desktop-window">
 	<div class="navbar">
 		<div class="element column"> PROJECTS </div>
 		<div class="element"> ABOUT ME</div>
@@ -83,6 +93,8 @@
 		<div class="element"> BLOG </div>
 	</div>
 	</div>
+
+	<br>
 
 	<div class="window">
 		<div class="header-container">
@@ -136,7 +148,7 @@
 								</div>
 								<div class= "engine"><img src="./images/resources/engines/scke-square.png"></div>
 							</div>
-							<div class="plink">
+							<div class="plink desktop-window">
 								<div class="textbox text-bubble rounded">
 									<div class="custom">
 										<a href="./project_pages/skywind.html">LEARN MORE</a>
@@ -188,6 +200,13 @@
 										</div>
 									</div>
 									<div class="engine"><img src="./images/resources/engines/godot.svg"></div>
+								</div>
+								<div class="plink desktop-window">
+									<div class="textbox text-bubble rounded">
+										<div class="custom">
+											<a href="./project_pages/genn.html">LEARN MORE</a>
+										</div>
+									</div>
 								</div>
 							</div>
 				</div></div></div>
