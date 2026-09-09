@@ -21,15 +21,37 @@ for (const child of navcolumn.children) {
 document.getElementById(active.textContent).classList.toggle("hidden", false);
 active.classList.toggle("active", true);
 
+
 function handleClick() {
     const element = document.getElementById(event.target.textContent);
+
+    //no content shown check
+    if (active == null) {
+        // make pressed button grey
+        event.target.classList.toggle("active", true);
+        // hide pressed button's content
+        if (element != null) {element.classList.toggle("hidden", false);}
+        // set the remembered active button
+        active = event.target;
+        return;
+    }
+
     const current = document.getElementById(active.textContent)
     
+    //make the last remembered button not grey
     active.classList.toggle("active", false);
+  
+    //double pressed button check
+    if (active == event.target) {
+        //make currently shown content hidden
+        if (current != null) {current.classList.toggle("hidden", true);}
+        active = null;
+        return;
+    }
+    
+    //make new pressed button grey
     event.target.classList.toggle("active", true);
     active = event.target;
-
-    if (element != null) {element.classList.toggle("hidden", false);}
     if (current != null) {current.classList.toggle("hidden", true);}
-    
+    if (element != null) {element.classList.toggle("hidden", false);}
 }
