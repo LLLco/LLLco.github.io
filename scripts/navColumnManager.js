@@ -37,12 +37,8 @@ function buttonCrawl(source, owner, first_override = true) {
         //exception catching
         if (child.id == "BACK") { continue; }
         
-        //projects here is a unique case for the main page navrow... may desire improvement later
-        if (first) {
-            //sets main as the active button
-            console.log(owner, " | ", child);
-            nb_dict.set(owner, child)
-        }
+        //sets first real button as the active button
+        if (first) {nb_dict.set(owner, child)}
 
 
         //handle default class arrangement
@@ -56,7 +52,8 @@ function buttonCrawl(source, owner, first_override = true) {
 console.log(nb_dict);
 
 for (const [id, button] of nb_dict) {
-    console.log(id, " || ", button)
+
+    button.classList.toggle("active", true);
     const button_page = document.getElementById(button.textContent);
     if(button_page != null) {button_page.classList.toggle("hidden", false);}
 }
@@ -76,8 +73,8 @@ function handleClick() {
         // set the remembered active button
         nb_dict.set(owner, pressed_button);
         
-        const d = document.getElementById("DEFAULT");
-        if (d != null) {d.classList.toggle("hidden", true);}
+        //const d = document.getElementById("DEFAULT");
+        //if (d != null) {d.classList.toggle("hidden", true);}
         
         return;
     }

@@ -104,10 +104,10 @@
     border-right: calc(var(--border-width)*1.5) solid hsl(0, 0%, 66%);
     border-right: calc(var(--border-width)*1.5) solid gainsboro;
 
-    aspect-ratio: 5.5/1;
+    aspect-ratio: 9/1;
     padding: 1%;
 
-    flex: 0 1 auto;
+    flex: 1 1 auto;
 }
 .navbar .element:hover{
     cursor: pointer;
