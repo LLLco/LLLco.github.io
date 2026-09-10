@@ -11,7 +11,6 @@
 	<link rel="stylesheet" href="/css/windows.css" type="text/css" media="all">
 	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all">
 	<link rel="stylesheet" href="/css/projpanels.css" type="text/css" media="all">
-	<link rel="stylesheet" href="/css/projpages.css" type="text/css" media="all">
 
 </head>
 
@@ -44,7 +43,7 @@
 		<div class="content-container">
 			<div class="content row" style="background-color: black; padding: 0;">
 				<div class="desktop-window">
-					<div id="navcolumn">		
+					<div class="navbar column">		
 						<button class="element menu active">MAIN</button>
 						<div class="wip">
 							<div class="header"></div>
@@ -105,17 +104,22 @@
 						</div>
 	</div></div></div></div></div>
 
-
-	<div class=" desktop-window">
-	<div class=" window navbar">
-		<div class="element column"> PROJECTS </div>
-		<div class="element"> ABOUT ME</div>
-		<div class="element"> FAVORITES </div>
-		<div class="element"> BLOG </div>
+<br>
+	<div class="window desktop-window">
+		<div class="content-container">
+			<div class="content" style="padding: 0;">
+				<div class="navbar row"> 
+					<button class="element menu active">PROJECTS</button>
+					<div class="wip row">
+						<div class="header"></div>
+					<button class="element menu active">FAVORITE GAMES</button>
+					<button class="element menu active">GAME JAMS</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	</div>
-
-	<br>
+	
 
 	<div class="window">
 		<div class="header-container">
@@ -126,7 +130,7 @@
 			<div class="content contained column" style="gap:2vh">
 
 				<!--SKYWIND-->
-				<div>
+				<div style="order:1;">
 				<div class="window">
 					<div class="header-container">
 						<img src="./images/projects/skywind/logo.png">
@@ -184,7 +188,7 @@
 				</div>
 
 				<!--TOWER OF GENN-->
-				<div>
+				<div style="order:2;">
 					<div class="window">
 						<div class="header-container">
 							<img src="./images/projects/tog/logo_alt_2.png">
@@ -237,7 +241,7 @@
 
 
 				<!--TRIBOX-->
-				<div>
+				<div style="order:3;">
 					<div class="window">
 						<div class="header-container">
 							<img src="./images/projects/tribox/logo.png">
@@ -284,7 +288,7 @@
 
 
 				<!--GROG-->
-				<div>
+				<div style="order:5;">
 					<div class="window">
 						<div class="header-container">
 							<img src="./images/projects/grog/logo.jpg">
@@ -313,9 +317,9 @@
 											<ul>
 												<li>Everything</li>
 											</ul>
-											<b>Release(s):</b> Mar 2025 <br>
+											<b>Release(s):</b> Mar 2025 
 
-											<br>
+											<br><br>
 											GROG is a personal solo project developed moslty within a single spring break.
 											I have since been prototyping and experimenting with various planned additions. 
 										</div>
@@ -327,7 +331,7 @@
 
 
 				<!--BREAKER-->
-				<div class="hidden">
+				<div style="order:4;">
 					<div class="window">
 						<div class="header-container">
 							<img src="./images/projects/breaker/logo.png">
@@ -345,15 +349,28 @@
 											<div class="tag narrative"></div>
 										</div>
 										<div class="body">
-											BREAKER is a speedrunning first person shooter, 
+											BREAKER is a jazzy speedrunning first person shooter, 
 											focused on delivering high octane action packed levels fit for only masters of combat.
-											It utilizes a harsh cyberpunk art style, a brutal and emotional narrative, 
-											accompanied by improvised jazz.
+											
 											<br><br>
-											Developed in Unreal Engine 5.6 by a team of 10-20, BREAKER's demo released in Q2 2026.
+
+											<b>Team Size:</b> 10-20 <br>
+											<b>Time on Project:</b> 3 Months <br>
+											<b>Contributions:</b>
+											<ul>
+												<li>2 Levels</li>
+												<li>Worldbuilding</li>
+												<li>Team Lead</li>
+												<li>Production</li>
+											</ul>
+											<b>Release(s):</b> May 2026 
+
+											<br><br>
+											
+											Developed in Unreal Engine 5.6 by a team of 10-20.
 										</div>
 									</div>
-									<div class= "engine"><img src="./images/resources/engines/unreal.png"></div>
+									<div class= "engine"><img src="./images/resources/engines/unreal2.png"></div>
 								</div>
 							</div>
 				</div></div></div>

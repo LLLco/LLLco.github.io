@@ -1,11 +1,8 @@
-#navcolumn{
-    
+.navbar{
     z-index: 2;
     pointer-events: auto;
-    display: flex;
-    flex-direction: column;
     justify-content: flex-start;
-    height: 100%;
+    
     
     background-color: hsl(0, 0%, 40%);
     box-shadow:
@@ -15,22 +12,27 @@
 
     margin-left: calc(var(--border-width)*1.5);
 }
-#navcolumn .wip{
+.navbar.row {
+    min-width: 0;
+    gap:calc(var(--border-width)*1.5);
+    flex: 0 1 auto;
+}
+.navbar.column {
+    height: 100%;
+}
+.navbar .wip{
     border: calc(var(--border-width)*2) solid black;
     outline: calc(var(--border-width) * 2) dashed yellow;
     outline-offset: calc(var(--border-width) * -2);
-   
-    display: flex;
-    flex-direction: column;
     box-sizing: border-box;
 }
-#navcolumn .wip .header{
-    width:100%;
-    aspect-ratio: 3/1;
+.navbar.row .wip{
+    flex: auto;
+}
+.navbar .wip .header{
     min-width: 80px;
 
     background-repeat: no-repeat, no-repeat;
-    border-bottom: calc(var(--border-width)*2) dashed yellow;
     
     font-family: 'Times New Roman', Times, serif;
     display: flex;
@@ -46,10 +48,19 @@
     color: yellow;
     background-color: black;
 }
-#navcolumn .wip .header::after{
+.navbar.row .wip .header{
+    border-right: calc(var(--border-width)*2) dashed yellow;
+    flex: 0 1 auto;
+}
+.navbar.column .wip .header{
+    width:100%;
+    aspect-ratio: 3/1;
+    border-bottom: calc(var(--border-width)*2) dashed yellow;
+}
+.navbar .wip .header::after{
     content: "WIP"
 }
-#navcolumn .divider{
+.navbar .divider{
     width:100%;
     aspect-ratio: 6/1;
 
@@ -70,14 +81,9 @@
     color: gainsboro;
     background-color: grey;
 }
-#navcolumn .element{
-    width:100%;
-    aspect-ratio: 3/1;
+.navbar .element{
     min-width: 80px;
 
-    background-repeat: no-repeat, no-repeat;
-    border-bottom: calc(var(--border-width)*1.5) solid hsl(0, 0%, 66%);;
-    
     font-family: 'Times New Roman', Times, serif;
     display: flex;
     flex-direction: column;
@@ -89,30 +95,48 @@
 
     overflow: hidden;
 }
-#navcolumn .element.back{
-    color: white;
-    background-color: red;
+.navbar.column .element{
+    border-bottom: calc(var(--border-width)*1.5) solid hsl(0, 0%, 66%);
+    width:100%;
+    aspect-ratio: 3/1;
 }
-#navcolumn .element.back.active{
-    color: grey;
-    background-color: brown;
+.navbar.row .element{
+    border-right: calc(var(--border-width)*1.5) solid hsl(0, 0%, 66%);
+    border-right: calc(var(--border-width)*1.5) solid gainsboro;
+
+    aspect-ratio: 5.5/1;
+    padding: 1%;
+
+    flex: 0 1 auto;
 }
-#navcolumn .element.back::after{
-    content: "BACK"
-}
-#navcolumn .element.menu{
-    color: black;
-    background-color: white;
-}
-#navcolumn .element.menu.active{
-    color: black;
-    background-color: grey;
-}
-#navcolumn .element:hover{
+.navbar .element:hover{
     cursor: pointer;
     z-index: 100;
 	transform: translate(0px,calc(var(--border-width) * -1));
 	box-shadow:  
         0 var(--border-width) black,
         0 calc(var(--border-width)*-1) hsl(0, 0%, 50%);
+}
+
+
+.navbar .element.back{
+    color: white;
+    background-color: red;
+}
+.navbar .element.back.active{
+    color: grey;
+    background-color: brown;
+}
+.navbar .element.back::after{
+    content: "BACK"
+}
+
+
+.navbar .element.menu{
+    color: black;
+    background-color: white;
+}
+.navbar .element.menu.active{
+    color: black;
+    background-color: grey;
 }

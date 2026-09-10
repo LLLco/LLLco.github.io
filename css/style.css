@@ -114,49 +114,6 @@ body {
 }
 
 
-.navbar {
-	display: flex;
-	justify-content: flex-end;
-	padding: 0;
-	box-sizing: border-box;
-	flex-direction: row;
-	background-color:black;
-	box-shadow: inset 0 0 0 var(--border-width) white;
-	color: white;
-	height: 6vh;
-	width: 100%;
-	margin-bottom: 1vh;
-}
-.navbar .element {
-	position:relative;
-	text-align: center;
-	height:100%;
-	width:auto;
-	flex-basis: 100%;
-	background-color: white;
-	border: var(--border-width) outset white;
-	box-sizing: border-box;
-	font-size: 200%;
-	/* color: hsl(0, 0%, 20%);  */
-	color: white;
-	font-weight: bold;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-
-	/*box-shadow: 
-	inset 2px 2px 0 2px darkgray,
-	inset 0 0 0 4px gainsboro;*/
-}
-.navbar .element:hover {
-	cursor: pointer;
-	transform: translate(0px,calc(var(--border-width) * -2));
-	box-shadow:  0 var(--border-width) 0 0 black;
-	z-index: 1;
-}
-
-
 .copyright {
 	font-size: 80%; 
 	font-family: 'MS UI Gothic', sans-serif;
