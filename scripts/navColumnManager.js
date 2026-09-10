@@ -8,19 +8,30 @@ link.type = "text/css";
 link.href = "../css/navcolumn.css";
 document.head.appendChild(link);
 
-for (const child of navcolumn.children) {
-    if (child.id == "BACK") { continue; }
-    if (child.classList.contains("divider") == true) { continue; }
-    if (child.textContent == "MAIN") {active = child;}
+buttonCrawl(navcolumn.children);
 
-    buttons.push(child)
-    child.addEventListener("click", handleClick);
-    child.classList.toggle("active", false);
+function buttonCrawl(source) {
+    for (const child of source) {
+        //exception catching
+        if (child.id == "BACK") { continue; }
+        if (child.classList.contains("divider") == true) { continue; }
+        if (child.textContent == "MAIN") {active = child;}
+        if (child.classList.contains("wip") == true) { 
+            buttonCrawl(child.children);
+            continue; 
+        }
+
+        //handle default class arrangement
+        buttons.push(child)
+        child.addEventListener("click", handleClick);
+        child.classList.toggle("active", false);
+    }
 }
 
 document.getElementById(active.textContent).classList.toggle("hidden", false);
 active.classList.toggle("active", true);
 
+console.log(buttons)
 
 function handleClick() {
     const element = document.getElementById(event.target.textContent);
@@ -33,6 +44,10 @@ function handleClick() {
         if (element != null) {element.classList.toggle("hidden", false);}
         // set the remembered active button
         active = event.target;
+        
+        const d = document.getElementById("DEFAULT");
+        if (d != null) {d.classList.toggle("hidden", true);}
+        
         return;
     }
 
@@ -46,6 +61,10 @@ function handleClick() {
         //make currently shown content hidden
         if (current != null) {current.classList.toggle("hidden", true);}
         active = null;
+
+        const d = document.getElementById("DEFAULT");
+        if (d != null) {d.classList.toggle("hidden", false);}
+
         return;
     }
     

@@ -7,10 +7,11 @@
 	<title>bjorlidev | dekkerd</title>
 	<link rel="icon" type="image/png" href="./images/style/favicon.png">
 
-	<link rel="stylesheet" href="./css/tags.css" type="text/css" media="all">
-	<link rel="stylesheet" href="./css/windows.css" type="text/css" media="all">
-	<link rel="stylesheet" href="./css/style.css" type="text/css" media="all">
-	<link rel="stylesheet" href="./css/projpanels.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/tags.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/windows.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/projpanels.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/css/projpages.css" type="text/css" media="all">
 
 </head>
 
@@ -42,15 +43,33 @@
 		</div>
 		<div class="content-container">
 			<div class="content row" style="background-color: black; padding: 0;">
-				<div>
-					<div id="navcolumn">
-						<a href="../index.html" id="BACK"><div class="element back"></div></a>
+				<div class="desktop-window">
+					<div id="navcolumn">		
 						<button class="element menu active">MAIN</button>
-						<button class="element menu active">NULL</button>
-						<button class="element menu active">NULL</button>
-						<button class="element menu active">NULL</button>
+						<div class="wip">
+							<div class="header"></div>
+						<button class="element menu active">ABOUT</button>
+						<button class="element menu active">TRIPLEDDRUGGCO</button>
+						<button class="element menu active">BLOG</button>
+						</div>
 					</div>
 				</div>
+				<div class="hidden" id="ABOUT" style="padding:1%">
+					hello, i am me
+				</div>
+				<div class="hidden" id="TRIPLEDDRUGGCO" style="padding:1%">
+					yah so i like run a studio-ish thing kinda. wishlist Tower of Genn
+				</div>
+				<div class="hidden" id="BLOG" style="padding:1%">
+					i have not quite figured out how i want to format this yet
+				</div>
+				<!-- SECRET HIDDEN CONTENT -->
+				<div class="hidden" style="padding:1%" id="DEFAULT">
+					you have found the secret hidden text box....
+					<br><br>
+					how is your day today
+				</div>
+				<!-- MAIN CONTENT -->
 				<div class="column" style="padding:1%" id="MAIN">
 					<div style="font-size: 2.5rem">
 						<b>I'm Liam Burley, a Level Designer !!</b>
@@ -135,7 +154,10 @@
 											<div>
 												<b>Team Size:</b> Hundreds <br>
 												<b>Time on Project:</b> 13 months <br>
-												<b>Contributions:</b> 4 POIs <br>
+												<b>Contributions:</b>
+												<ul>
+													<li>4 POIs</li>
+												</ul>
 												<b>Release(s):</b> When it's done <br>
 </div>
 									
