@@ -115,12 +115,15 @@ body {
 
 
 .copyright {
+	position: absolute;
 	font-size: 80%; 
 	font-family: 'MS UI Gothic', sans-serif;
 	font-style: italic;
+	flex-basis: 100%;
+	bottom:3%;
 }
 .copyright::after{
-	content: "copyright © 2026 Liam Burley";
+	content: "copyright © 2026 Liam Burley | v1.0.1";
 }
 
 
