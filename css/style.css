@@ -124,10 +124,10 @@ body {
 	font-family: 'MS UI Gothic', sans-serif;
 	font-style: italic;
 	flex-basis: 100%;
-	bottom:3%;
+	bottom:6px;
 }
 .copyright::after{
-	content: "copyright © 2026 Liam Burley | v1.0.2";
+	content: "copyright © 2026 Liam Burley | v1.0.3";
 }
 
 
