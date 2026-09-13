@@ -13,6 +13,19 @@
 	}
 }
 
+.copyright {
+	position: absolute;
+	font-size: 80%; 
+	font-family: 'MS UI Gothic', sans-serif;
+	font-style: italic;
+	flex-basis: 100%;
+	bottom:6px;
+}
+.copyright::after{
+	content: "copyright © 2026 Liam Burley | v1.0.4";
+}
+
+
 .background {
 	container-type: inline-size;
 	position: fixed;
@@ -118,17 +131,6 @@ body {
 }
 
 
-.copyright {
-	position: absolute;
-	font-size: 80%; 
-	font-family: 'MS UI Gothic', sans-serif;
-	font-style: italic;
-	flex-basis: 100%;
-	bottom:6px;
-}
-.copyright::after{
-	content: "copyright © 2026 Liam Burley | v1.0.3";
-}
 
 
 
