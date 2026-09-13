@@ -106,6 +106,10 @@ body {
 	display: flex;
 	flex-direction: row;
 }
+.rowr {
+	display: flex;
+	flex-direction: row-reverse;
+}
 .website-header {
 	margin-bottom: 1vh;
 }
@@ -123,7 +127,7 @@ body {
 	bottom:3%;
 }
 .copyright::after{
-	content: "copyright © 2026 Liam Burley | v1.0.1";
+	content: "copyright © 2026 Liam Burley | v1.0.2";
 }
 
 
