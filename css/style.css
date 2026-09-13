@@ -13,6 +13,11 @@
 	}
 }
 
+@font-face {
+	font-family: 'ggSans';
+	src: url(/css/fonts/gg\ sans\ Regular.ttf);
+}
+
 .copyright {
 	position: absolute;
 	font-size: 80%; 
@@ -22,7 +27,7 @@
 	bottom:6px;
 }
 .copyright::after{
-	content: "copyright © 2026 Liam Burley | v1.0.4";
+	content: "copyright © 2026 Liam Burley | v1.0.5";
 }
 
 
@@ -77,7 +82,7 @@ body {
 	background-color: rgb(46, 86, 139);
 	
 	color: black;
-	font-family: Verdana;
+	font-family: "ggSans", sans-serif;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
