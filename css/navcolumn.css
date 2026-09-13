@@ -20,6 +20,13 @@
 .navbar.column {
     height: 100%;
 }
+
+.navbar.column .spacer{
+    width: 100%;
+    
+}
+
+
 .navbar .wip{
     border: calc(var(--border-width)*2) solid black;
     outline: calc(var(--border-width) * 2) dashed yellow;
@@ -131,7 +138,10 @@
     content: "BACK"
 }
 
-
+.navbar .wip .element.menu{
+    color: black;
+    background-color: rgb(255, 255, 170);
+}
 .navbar .element.menu{
     color: black;
     background-color: white;

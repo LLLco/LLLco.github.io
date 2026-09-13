@@ -102,3 +102,24 @@ function handleClick() {
     if (current_page != null) {current_page.classList.toggle("hidden", true);}
     if (element != null) {element.classList.toggle("hidden", false);}
 }
+
+// const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
+
+// const spacers = document.getElementsByClassName("spacer");
+// console.log(spacers);
+
+// window.addEventListener("scroll", handleScroll)
+
+// function handleScroll() {
+//     if (spacers.length === 0) {return;}
+
+//     for (const spacer of spacers) {
+//         const scrollTop = window.scrollY || document.documentElement.scrollTop;
+//         const sPos = spacer.getBoundingClientRect().top + window.scrollY;
+//         const newPos = clamp(scrollTop - sPos, 0, 999999)
+
+//         spacer.style.marginTop = `${newPos}px`;
+//     }
+// }
+
+

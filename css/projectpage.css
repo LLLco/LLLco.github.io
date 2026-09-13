@@ -1,6 +1,7 @@
 .project-body {
     min-width: 1903px;
-    --desktop-width:1152px
+    --desktop-width:1152px;
+    font-size: 1.05rem;
 }
 
 .image-section{
@@ -42,7 +43,7 @@
 }
 .embed .note {
     font-style: italic;
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     position: absolute;
     color: white;
     width: 100%;
